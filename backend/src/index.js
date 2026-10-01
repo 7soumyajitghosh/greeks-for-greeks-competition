@@ -22,6 +22,11 @@ app.use("/api/followup", followup);
 app.use("/api/upload", upload);
 app.use("/api/history", history);
 app.use("/uploads", express.static(path.resolve(process.env.UPLOAD_DIR || "./uploads")));
+app.use(express.static(path.join(__dirname, "../public")));
+app.get("*", (req, res, next) => {
+  if (req.path.startsWith("/api/")) return next();
+  res.sendFile(path.join(__dirname, "../public/index.html"));
+});
 
 const PORT = process.env.PORT || 4000;
 if (require.main === module) {
