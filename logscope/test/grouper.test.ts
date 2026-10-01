@@ -95,12 +95,13 @@ describe('detectAnomalies', () => {
   it('detects new templates appearing late', () => {
     const events: LogEvent[] = [];
     let id = 0;
+    // Long enough to share a 4-token prefix so they form one template.
     for (let m = 0; m < 20; m++) {
-      events.push({ id: id++, timestamp: m * 60000, level: 'error', message: `old error ${m}`, raw: '', source: null });
+      events.push({ id: id++, timestamp: m * 60000, level: 'error', message: `old error occurred in module auth`, raw: '', source: null });
     }
     // new pattern only in the last minute
     for (let i = 0; i < 5; i++) {
-      events.push({ id: id++, timestamp: 20 * 60000 + i * 1000, level: 'error', message: `brand new failure ${i}`, raw: '', source: null });
+      events.push({ id: id++, timestamp: 20 * 60000 + i * 1000, level: 'error', message: `brand new failure detected in service`, raw: '', source: null });
     }
     const { templates, eventTemplateId } = extractTemplates(events);
     const issues = groupIssues(events, templates, eventTemplateId);

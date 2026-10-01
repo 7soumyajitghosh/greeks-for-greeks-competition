@@ -15,7 +15,7 @@ export type LogFormat = 'auto' | 'json' | 'iso' | 'syslog' | 'nginx' | 'plain';
 
 const LEVEL_WORDS: [LogLevel, RegExp][] = [
   ['fatal', /\b(fatal|panic)\b/i],
-  ['error', /\b(error|err|exception|failed|failure|uncaught|unhandled)\b/i],
+  ['error', /\b(error|err|exception|failed|failure|uncaught|unhandled|refused|timeout|timed out)\b/i],
   ['warn', /\b(warn|warning)\b/i],
   ['info', /\b(info|information)\b/i],
   ['debug', /\b(debug|trace)\b/i],
@@ -31,13 +31,19 @@ export function inferLevel(text: string): LogLevel {
 
 const LEVEL_TOKEN = /^(TRACE|DEBUG|INFO|WARN|WARNING|ERROR|FATAL|CRITICAL|SEVERE)\b[:\s-]?/i;
 
+/** Leading bracket level marker, e.g. "[ERROR] message". */
+const BRACKET_LEVEL = /^\[(TRACE|DEBUG|INFO|WARN|WARNING|ERROR|FATAL|CRITICAL|SEVERE)\]\s*/i;
+
+function levelFromToken(tok: string): LogLevel {
+  const t = tok.toUpperCase();
+  return t === 'WARNING' ? 'warn' : (t.toLowerCase() as LogLevel);
+}
+
 const ISO_TS = /^(\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2}:\d{2}(?:[.,]\d+)?(?:Z|[+-]\d{2}:?\d{2})?)\s+(.*)$/;
 
 const SYSLOG_TS = /^([A-Z][a-z]{2}\s+\d{1,2}\s+\d{2}:\d{2}:\d{2})\s+(\S+)\s+(.*?)(?:\[(\d+)\])?:\s*(.*)$/;
 
 const NGINX_TS = /^(\S+)\s+\S+\s+\S+\s+\[([^\]]+)\]\s+"([^"]*)"\s+(\d{3})\s+(\S+)/;
-
-const BRACKET_LEVEL = /\[(TRACE|DEBUG|INFO|WARN|WARNING|ERROR|FATAL|CRITICAL)\]/i;
 
 const MONTHS: Record<string, number> = {
   jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5,
@@ -106,10 +112,9 @@ function parseJsonLine(line: string): Omit<LogEvent, 'id' | 'raw'> | null {
   let level: LogLevel = 'info';
   const rawLevel = pick(rec, JSON_LEVEL_KEYS);
   if (typeof rawLevel === 'string') {
-    const m = LEVEL_TOKEN.exec(rawLevel.toUpperCase().replace(/^(TRACE|DEBUG|INFO|WARN|WARNING|ERROR|FATAL|CRITICAL)\b[:\s-]?/, '$1'));
+    const m = LEVEL_TOKEN.exec(rawLevel);
     if (m) {
-      const tok = m[1]!.toUpperCase();
-      level = tok === 'WARNING' ? 'warn' : (tok.toLowerCase() as LogLevel);
+      level = levelFromToken(m[1]!);
     } else {
       level = inferLevel(rawLevel);
     }
@@ -135,7 +140,7 @@ function parseNginxLine(line: string): Omit<LogEvent, 'id' | 'raw'> | null {
     timestamp,
     level,
     message: `${methodPath} -> ${status}`,
-    source: m[1],
+    source: m[1] ?? null,
   };
 }
 
@@ -155,10 +160,14 @@ function parseIsoLine(line: string): Omit<LogEvent, 'id' | 'raw'> | null {
   let rest = m[2]!;
 
   let level: LogLevel | null = null;
+  const bm = BRACKET_LEVEL.exec(rest);
+  if (bm) {
+    level = levelFromToken(bm[1]!);
+    rest = rest.slice(bm[0].length);
+  }
   const lm = LEVEL_TOKEN.exec(rest);
   if (lm) {
-    const tok = lm[1]!.toUpperCase();
-    level = tok === 'WARNING' ? 'warn' : (tok.toLowerCase() as LogLevel);
+    level = levelFromToken(lm[1]!);
     rest = rest.slice(lm[0].length);
   }
 
@@ -176,10 +185,14 @@ function parseIsoLine(line: string): Omit<LogEvent, 'id' | 'raw'> | null {
 function parsePlainLine(line: string): Omit<LogEvent, 'id' | 'raw'> {
   let rest = line;
   let level: LogLevel | null = null;
+  const bm = BRACKET_LEVEL.exec(rest);
+  if (bm) {
+    level = levelFromToken(bm[1]!);
+    rest = rest.slice(bm[0].length);
+  }
   const lm = LEVEL_TOKEN.exec(rest);
   if (lm) {
-    const tok = lm[1]!.toUpperCase();
-    level = tok === 'WARNING' ? 'warn' : (tok.toLowerCase() as LogLevel);
+    level = levelFromToken(lm[1]!);
     rest = rest.slice(lm[0].length);
   }
   return { timestamp: null, level: level ?? inferLevel(rest), message: rest, source: null };

@@ -1,0 +1,27 @@
+EventId,EventTemplate,Occurrences
+t2,<*>-02 request: user=<*>,162
+t5,<*>-01 request: user=<*>,127
+t6,worker-01 request: user=<*>,80
+t3,<*>-01 request: user=<*>,29
+t7,<*>-02 connection refused to db.internal port <*>,25
+t10,<*>-02 request: user=<*>,23
+t17,<*>-02 timeout waiting for /api/<*>,21
+t14,<*>-01 connection refused to db.internal port <*>,19
+t4,worker-01 request: user=<*>>*>,16
+t12,worker-01 connection refused to db.internal port <*>,16
+t1,api-01 request: user=frank path=/<*>l<*>,13
+t21,worker-01 timeout waiting for /<*>>,10
+t11,"{""time"":""2024-06-15T10:<*>>>>>>>>>:00.000Z"",""level"":""info"",""logger"":""audit"",""msg"":""audit event"",""host"":""<*>>>>>>>>""<*>user"":""<*>y"":<*>>*>>*>>><*>",10
+t13,<*>-01 timeout waiting for /api/<*>,9
+t15,<*>-02 timeout waiting for /health after <*>,7
+t24,<*>-02 disk full: no space left on device /var/log,6
+t25,<*>-01 disk full: no space left on device /var/log,4
+t20,<*>-01 timeout waiting for /health after <*>,3
+t18,<*>-02 slow request: path=/api/<*>took<*>,3
+t19,api-02 NullPointerException in CheckoutService for user <*>,3
+t8,<*>-01 NullPointerException in CheckoutService for user <*>,2
+t26,worker-01 disk full: no space left on device /var/log,2
+t23,web-01 slow request: path=/api/search took 1446ms,1
+t22,web-02 slow request: path=/health took 1516ms,1
+t9,worker-01 slow request: path=/api/users took 2218ms,1
+t16,worker-01 NullPointerException in CheckoutService for user dave,1

@@ -69,7 +69,7 @@ describe('detectFormat', () => {
     expect(detectFormat(['{"time":"x","level":"info","msg":"y"}'])).toBe('json');
   });
   it('detects nginx', () => {
-    expect(detectFormat(['1.2.3.4 - - [15/Jan/2024:10:23:45 +0000] "GET / 200 1'])).toBe('nginx');
+    expect(detectFormat(['1.2.3.4 - - [15/Jan/2024:10:23:45 +0000] "GET / HTTP/1.1" 200 1'])).toBe('nginx');
   });
   it('detects syslog', () => {
     expect(detectFormat(['Jan 15 10:23:45 host proc[1]: msg'])).toBe('syslog');
@@ -85,7 +85,7 @@ describe('detectFormat', () => {
 describe('parseLines', () => {
   it('skips blank lines and assigns ids', () => {
     const events = parseLines(['hello failure', '', '   ', 'warn: x'], 'auto');
-    expect(events).toHaveLength(3);
-    expect(events.map((e) => e.id)).toEqual([0, 1, 2]);
+    expect(events).toHaveLength(2);
+    expect(events.map((e) => e.id)).toEqual([0, 1]);
   });
 });

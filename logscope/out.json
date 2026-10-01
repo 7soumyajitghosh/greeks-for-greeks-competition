@@ -1,0 +1,4058 @@
+{
+  "file": "test/sample.log",
+  "totalLines": 594,
+  "parsedLines": 594,
+  "timeRange": {
+    "start": 1718425800000,
+    "end": 1718427596000
+  },
+  "levelCounts": {
+    "debug": 0,
+    "info": 460,
+    "warn": 6,
+    "error": 116,
+    "fatal": 12
+  },
+  "templates": [
+    {
+      "id": "t1",
+      "template": "api-01 request: user=frank path=/<*>l<*>",
+      "tokens": [
+        "api",
+        "01",
+        "request",
+        "user",
+        "frank",
+        "path",
+        "<*>",
+        "<*>",
+        "<*>",
+        "<*>",
+        "<*>"
+      ],
+      "count": 13,
+      "level": "info",
+      "firstSeen": 1718425800000,
+      "lastSeen": 1718427490000,
+      "sample": "api-01 request: user=frank path=/health status=200 230ms",
+      "parameters": [
+        [
+          "api",
+          "login",
+          "status",
+          "201"
+        ],
+        [
+          "api",
+          "checkout",
+          "status",
+          "200",
+          "78ms"
+        ],
+        [
+          "api",
+          "orders",
+          "status",
+          "200",
+          "356ms"
+        ],
+        [
+          "api",
+          "search",
+          "status",
+          "301",
+          "197ms"
+        ],
+        [
+          "api",
+          "checkout",
+          "status",
+          "200",
+          "110ms"
+        ],
+        [
+          "api",
+          "checkout",
+          "status",
+          "201",
+          "361ms"
+        ],
+        [
+          "api",
+          "search",
+          "status",
+          "200",
+          "377ms"
+        ],
+        [
+          "api",
+          "users",
+          "status",
+          "200",
+          "41ms"
+        ],
+        [
+          "api",
+          "search",
+          "status",
+          "301",
+          "236ms"
+        ],
+        [
+          "api",
+          "users",
+          "status",
+          "404",
+          "375ms"
+        ],
+        [
+          "api",
+          "login",
+          "status",
+          "301",
+          "258ms"
+        ],
+        [
+          "api",
+          "users",
+          "status",
+          "201",
+          "283ms"
+        ]
+      ]
+    },
+    {
+      "id": "t3",
+      "template": "<*>-01 request: user=<*>",
+      "tokens": [
+        "<*>",
+        "01",
+        "request",
+        "user",
+        "<*>",
+        "path",
+        "health",
+        "status",
+        "<*>",
+        "<*>"
+      ],
+      "count": 29,
+      "level": "info",
+      "firstSeen": 1718425816000,
+      "lastSeen": 1718427596000,
+      "sample": "web-01 request: user=bob path=/health status=200 30ms",
+      "parameters": [
+        [
+          "api",
+          "frank",
+          "404",
+          "376ms"
+        ],
+        [
+          "api",
+          "erin",
+          "301",
+          "98ms"
+        ],
+        [
+          "api",
+          "frank",
+          "200",
+          "400ms"
+        ],
+        [
+          "web",
+          "frank",
+          "200",
+          "101ms"
+        ],
+        [
+          "web",
+          "carol",
+          "404",
+          "131ms"
+        ],
+        [
+          "web",
+          "dave",
+          "200",
+          "258ms"
+        ],
+        [
+          "api",
+          "alice",
+          "201",
+          "20ms"
+        ],
+        [
+          "api",
+          "carol",
+          "200",
+          "253ms"
+        ],
+        [
+          "web",
+          "dave",
+          "200",
+          "415ms"
+        ],
+        [
+          "web",
+          "dave",
+          "200",
+          "31ms"
+        ],
+        [
+          "api",
+          "carol",
+          "201",
+          "217ms"
+        ],
+        [
+          "web",
+          "erin",
+          "200",
+          "104ms"
+        ],
+        [
+          "web",
+          "frank",
+          "200",
+          "42ms"
+        ],
+        [
+          "api",
+          "dave",
+          "404",
+          "147ms"
+        ],
+        [
+          "api",
+          "alice",
+          "200",
+          "212ms"
+        ],
+        [
+          "web",
+          "erin",
+          "201",
+          "298ms"
+        ],
+        [
+          "api",
+          "bob",
+          "404",
+          "213ms"
+        ],
+        [
+          "web",
+          "carol",
+          "200",
+          "171ms"
+        ],
+        [
+          "web",
+          "dave",
+          "200",
+          "292ms"
+        ],
+        [
+          "api",
+          "bob",
+          "301",
+          "215ms"
+        ],
+        [
+          "web",
+          "alice",
+          "301",
+          "407ms"
+        ],
+        [
+          "api",
+          "bob",
+          "404",
+          "73ms"
+        ],
+        [
+          "api",
+          "erin",
+          "200",
+          "227ms"
+        ],
+        [
+          "web",
+          "frank",
+          "301",
+          "285ms"
+        ],
+        [
+          "web",
+          "dave",
+          "404",
+          "48ms"
+        ],
+        [
+          "api",
+          "alice",
+          "200",
+          "277ms"
+        ],
+        [
+          "web",
+          "carol",
+          "200",
+          "306ms"
+        ],
+        [
+          "api",
+          "bob",
+          "200",
+          "305ms"
+        ]
+      ]
+    },
+    {
+      "id": "t5",
+      "template": "<*>-01 request: user=<*>",
+      "tokens": [
+        "<*>",
+        "01",
+        "request",
+        "user",
+        "<*>",
+        "path",
+        "api",
+        "<*>",
+        "status",
+        "<*>",
+        "<*>"
+      ],
+      "count": 127,
+      "level": "info",
+      "firstSeen": 1718425802000,
+      "lastSeen": 1718427590000,
+      "sample": "web-01 request: user=dave path=/api/search status=200 278ms",
+      "parameters": [
+        [
+          "frank",
+          "orders",
+          "404",
+          "74ms"
+        ],
+        [
+          "carol",
+          "orders",
+          "201",
+          "379ms"
+        ],
+        [
+          "api",
+          "carol",
+          "search",
+          "200",
+          "311ms"
+        ],
+        [
+          "api",
+          "bob",
+          "orders",
+          "200",
+          "187ms"
+        ],
+        [
+          "api",
+          "dave",
+          "users",
+          "200",
+          "139ms"
+        ],
+        [
+          "web",
+          "bob",
+          "login",
+          "200",
+          "136ms"
+        ],
+        [
+          "api",
+          "carol",
+          "orders",
+          "200",
+          "190ms"
+        ],
+        [
+          "web",
+          "frank",
+          "orders",
+          "200",
+          "59ms"
+        ],
+        [
+          "web",
+          "carol",
+          "users",
+          "201",
+          "245ms"
+        ],
+        [
+          "api",
+          "bob",
+          "login",
+          "200",
+          "43ms"
+        ],
+        [
+          "api",
+          "erin",
+          "users",
+          "200",
+          "320ms"
+        ],
+        [
+          "api",
+          "alice",
+          "users",
+          "200",
+          "68ms"
+        ],
+        [
+          "api",
+          "bob",
+          "checkout",
+          "200",
+          "74ms"
+        ],
+        [
+          "web",
+          "dave",
+          "search",
+          "200",
+          "224ms"
+        ],
+        [
+          "api",
+          "dave",
+          "login",
+          "201",
+          "21ms"
+        ],
+        [
+          "api",
+          "erin",
+          "login",
+          "301",
+          "258ms"
+        ],
+        [
+          "api",
+          "erin",
+          "search",
+          "201",
+          "360ms"
+        ],
+        [
+          "web",
+          "alice",
+          "login",
+          "404",
+          "20ms"
+        ],
+        [
+          "api",
+          "dave",
+          "users",
+          "200",
+          "302ms"
+        ],
+        [
+          "api",
+          "dave",
+          "search",
+          "201",
+          "183ms"
+        ],
+        [
+          "web",
+          "erin",
+          "orders",
+          "200",
+          "27ms"
+        ],
+        [
+          "api",
+          "dave",
+          "search",
+          "404",
+          "230ms"
+        ],
+        [
+          "api",
+          "alice",
+          "login",
+          "200",
+          "68ms"
+        ],
+        [
+          "web",
+          "frank",
+          "orders",
+          "200",
+          "399ms"
+        ],
+        [
+          "api",
+          "erin",
+          "users",
+          "200",
+          "356ms"
+        ],
+        [
+          "web",
+          "frank",
+          "orders",
+          "404",
+          "399ms"
+        ],
+        [
+          "api",
+          "alice",
+          "checkout",
+          "200",
+          "112ms"
+        ],
+        [
+          "api",
+          "bob",
+          "checkout",
+          "404",
+          "193ms"
+        ],
+        [
+          "web",
+          "erin",
+          "login",
+          "301",
+          "239ms"
+        ],
+        [
+          "api",
+          "erin",
+          "checkout",
+          "301",
+          "126ms"
+        ],
+        [
+          "api",
+          "bob",
+          "search",
+          "201",
+          "129ms"
+        ],
+        [
+          "api",
+          "carol",
+          "search",
+          "200",
+          "135ms"
+        ],
+        [
+          "api",
+          "carol",
+          "orders",
+          "201",
+          "106ms"
+        ],
+        [
+          "web",
+          "erin",
+          "orders",
+          "200",
+          "267ms"
+        ],
+        [
+          "web",
+          "bob",
+          "search",
+          "301",
+          "313ms"
+        ],
+        [
+          "web",
+          "alice",
+          "search",
+          "201",
+          "131ms"
+        ],
+        [
+          "web",
+          "bob",
+          "checkout",
+          "404",
+          "157ms"
+        ],
+        [
+          "api",
+          "erin",
+          "orders",
+          "404",
+          "398ms"
+        ],
+        [
+          "web",
+          "bob",
+          "search",
+          "404",
+          "180ms"
+        ],
+        [
+          "web",
+          "alice",
+          "search",
+          "200",
+          "72ms"
+        ],
+        [
+          "api",
+          "alice",
+          "orders",
+          "301",
+          "73ms"
+        ],
+        [
+          "api",
+          "dave",
+          "users",
+          "404",
+          "99ms"
+        ],
+        [
+          "api",
+          "carol",
+          "users",
+          "200",
+          "147ms"
+        ],
+        [
+          "web",
+          "dave",
+          "login",
+          "200",
+          "350ms"
+        ],
+        [
+          "web",
+          "alice",
+          "users",
+          "200",
+          "200ms"
+        ],
+        [
+          "web",
+          "alice",
+          "checkout",
+          "201",
+          "419ms"
+        ],
+        [
+          "api",
+          "carol",
+          "login",
+          "301",
+          "288ms"
+        ],
+        [
+          "web",
+          "alice",
+          "login",
+          "301",
+          "225ms"
+        ],
+        [
+          "api",
+          "alice",
+          "login",
+          "200",
+          "78ms"
+        ],
+        [
+          "web",
+          "bob",
+          "checkout",
+          "200",
+          "234ms"
+        ],
+        [
+          "web",
+          "erin",
+          "checkout",
+          "301",
+          "93ms"
+        ],
+        [
+          "web",
+          "alice",
+          "checkout",
+          "201",
+          "168ms"
+        ],
+        [
+          "web",
+          "bob",
+          "login",
+          "301",
+          "148ms"
+        ],
+        [
+          "web",
+          "frank",
+          "search",
+          "301",
+          "258ms"
+        ],
+        [
+          "web",
+          "frank",
+          "orders",
+          "200",
+          "285ms"
+        ],
+        [
+          "web",
+          "frank",
+          "checkout",
+          "301",
+          "114ms"
+        ],
+        [
+          "web",
+          "dave",
+          "orders",
+          "201",
+          "87ms"
+        ],
+        [
+          "api",
+          "dave",
+          "checkout",
+          "201",
+          "294ms"
+        ],
+        [
+          "web",
+          "frank",
+          "checkout",
+          "201",
+          "307ms"
+        ],
+        [
+          "api",
+          "alice",
+          "users",
+          "301",
+          "116ms"
+        ],
+        [
+          "web",
+          "bob",
+          "search",
+          "200",
+          "70ms"
+        ],
+        [
+          "web",
+          "dave",
+          "search",
+          "301",
+          "75ms"
+        ],
+        [
+          "web",
+          "carol",
+          "checkout",
+          "201",
+          "272ms"
+        ],
+        [
+          "api",
+          "bob",
+          "checkout",
+          "201",
+          "93ms"
+        ],
+        [
+          "api",
+          "alice",
+          "search",
+          "200",
+          "29ms"
+        ],
+        [
+          "api",
+          "bob",
+          "search",
+          "200",
+          "240ms"
+        ],
+        [
+          "web",
+          "alice",
+          "search",
+          "200",
+          "241ms"
+        ],
+        [
+          "api",
+          "bob",
+          "checkout",
+          "301",
+          "178ms"
+        ],
+        [
+          "api",
+          "bob",
+          "users",
+          "200",
+          "415ms"
+        ],
+        [
+          "web",
+          "carol",
+          "users",
+          "301",
+          "210ms"
+        ],
+        [
+          "web",
+          "frank",
+          "users",
+          "200",
+          "325ms"
+        ],
+        [
+          "api",
+          "erin",
+          "search",
+          "404",
+          "356ms"
+        ],
+        [
+          "api",
+          "erin",
+          "orders",
+          "301",
+          "200ms"
+        ],
+        [
+          "api",
+          "bob",
+          "checkout",
+          "200",
+          "273ms"
+        ],
+        [
+          "api",
+          "alice",
+          "login",
+          "201",
+          "67ms"
+        ],
+        [
+          "web",
+          "alice",
+          "users",
+          "200",
+          "310ms"
+        ],
+        [
+          "web",
+          "carol",
+          "login",
+          "404",
+          "43ms"
+        ],
+        [
+          "web",
+          "frank",
+          "login",
+          "201",
+          "337ms"
+        ],
+        [
+          "web",
+          "carol",
+          "users",
+          "200",
+          "217ms"
+        ],
+        [
+          "api",
+          "bob",
+          "users",
+          "301",
+          "161ms"
+        ],
+        [
+          "api",
+          "erin",
+          "orders",
+          "200",
+          "236ms"
+        ],
+        [
+          "web",
+          "alice",
+          "orders",
+          "301",
+          "53ms"
+        ],
+        [
+          "web",
+          "carol",
+          "users",
+          "301",
+          "221ms"
+        ],
+        [
+          "web",
+          "alice",
+          "orders",
+          "201",
+          "89ms"
+        ],
+        [
+          "web",
+          "frank",
+          "search",
+          "301",
+          "133ms"
+        ],
+        [
+          "web",
+          "dave",
+          "login",
+          "200",
+          "114ms"
+        ],
+        [
+          "web",
+          "erin",
+          "search",
+          "200",
+          "144ms"
+        ],
+        [
+          "web",
+          "carol",
+          "orders",
+          "200",
+          "40ms"
+        ],
+        [
+          "api",
+          "dave",
+          "login",
+          "201",
+          "162ms"
+        ],
+        [
+          "web",
+          "dave",
+          "users",
+          "404",
+          "244ms"
+        ],
+        [
+          "api",
+          "dave",
+          "users",
+          "200",
+          "202ms"
+        ],
+        [
+          "api",
+          "carol",
+          "search",
+          "200",
+          "344ms"
+        ],
+        [
+          "web",
+          "carol",
+          "checkout",
+          "200",
+          "130ms"
+        ],
+        [
+          "web",
+          "alice",
+          "orders",
+          "200",
+          "370ms"
+        ],
+        [
+          "web",
+          "carol",
+          "search",
+          "200",
+          "93ms"
+        ],
+        [
+          "web",
+          "dave",
+          "checkout",
+          "404",
+          "63ms"
+        ],
+        [
+          "web",
+          "alice",
+          "login",
+          "200",
+          "406ms"
+        ],
+        [
+          "web",
+          "dave",
+          "login",
+          "200",
+          "300ms"
+        ],
+        [
+          "web",
+          "frank",
+          "users",
+          "404",
+          "51ms"
+        ],
+        [
+          "web",
+          "alice",
+          "login",
+          "301",
+          "140ms"
+        ]
+      ]
+    },
+    {
+      "id": "t8",
+      "template": "<*>-01 NullPointerException in CheckoutService for user <*>",
+      "tokens": [
+        "<*>",
+        "01",
+        "NullPointerException",
+        "in",
+        "CheckoutService",
+        "for",
+        "user",
+        "<*>"
+      ],
+      "count": 2,
+      "level": "error",
+      "firstSeen": 1718425800000,
+      "lastSeen": 1718426820000,
+      "sample": "api-01 NullPointerException in CheckoutService for user erin",
+      "parameters": [
+        [
+          "web",
+          "frank"
+        ]
+      ]
+    },
+    {
+      "id": "t13",
+      "template": "<*>-01 timeout waiting for /api/<*>",
+      "tokens": [
+        "<*>",
+        "01",
+        "timeout",
+        "waiting",
+        "for",
+        "api",
+        "<*>",
+        "after",
+        "<*>"
+      ],
+      "count": 9,
+      "level": "error",
+      "firstSeen": 1718425860000,
+      "lastSeen": 1718427300000,
+      "sample": "api-01 timeout waiting for /api/checkout after 7042ms",
+      "parameters": [
+        [
+          "web",
+          "5104ms"
+        ],
+        [
+          "api",
+          "5764ms"
+        ],
+        [
+          "api",
+          "6580ms"
+        ],
+        [
+          "web",
+          "login",
+          "5511ms"
+        ],
+        [
+          "web",
+          "checkout",
+          "7219ms"
+        ],
+        [
+          "api",
+          "search",
+          "5917ms"
+        ],
+        [
+          "web",
+          "users",
+          "6320ms"
+        ],
+        [
+          "api",
+          "checkout",
+          "6017ms"
+        ]
+      ]
+    },
+    {
+      "id": "t20",
+      "template": "<*>-01 timeout waiting for /health after <*>",
+      "tokens": [
+        "<*>",
+        "01",
+        "timeout",
+        "waiting",
+        "for",
+        "health",
+        "after",
+        "<*>"
+      ],
+      "count": 3,
+      "level": "error",
+      "firstSeen": 1718426719000,
+      "lastSeen": 1718426734000,
+      "sample": "web-01 timeout waiting for /health after 5975ms",
+      "parameters": [
+        [
+          "api",
+          "6528ms"
+        ],
+        [
+          "web",
+          "5440ms"
+        ]
+      ]
+    },
+    {
+      "id": "t14",
+      "template": "<*>-01 connection refused to db.internal port <*>",
+      "tokens": [
+        "<*>",
+        "01",
+        "connection",
+        "refused",
+        "to",
+        "db",
+        "internal",
+        "port",
+        "<*>"
+      ],
+      "count": 19,
+      "level": "error",
+      "firstSeen": 1718425961000,
+      "lastSeen": 1718427514000,
+      "sample": "api-01 connection refused to db.internal port 6379",
+      "parameters": [
+        [
+          "web",
+          "27017"
+        ],
+        [
+          "web",
+          "443"
+        ],
+        [
+          "web",
+          "443"
+        ],
+        [
+          "web",
+          "27017"
+        ],
+        [
+          "web",
+          "5432"
+        ],
+        [
+          "api",
+          "6379"
+        ],
+        [
+          "web",
+          "443"
+        ],
+        [
+          "api",
+          "443"
+        ],
+        [
+          "web",
+          "6379"
+        ],
+        [
+          "api",
+          "27017"
+        ],
+        [
+          "api",
+          "443"
+        ],
+        [
+          "api",
+          "6379"
+        ],
+        [
+          "api",
+          "27017"
+        ],
+        [
+          "web",
+          "443"
+        ],
+        [
+          "api",
+          "443"
+        ],
+        [
+          "api",
+          "6379"
+        ]
+      ]
+    },
+    {
+      "id": "t23",
+      "template": "web-01 slow request: path=/api/search took 1446ms",
+      "tokens": [
+        "web",
+        "01",
+        "slow",
+        "request",
+        "path",
+        "api",
+        "search",
+        "took",
+        "1446ms"
+      ],
+      "count": 1,
+      "level": "warn",
+      "firstSeen": 1718427120000,
+      "lastSeen": 1718427120000,
+      "sample": "web-01 slow request: path=/api/search took 1446ms",
+      "parameters": []
+    },
+    {
+      "id": "t25",
+      "template": "<*>-01 disk full: no space left on device /var/log",
+      "tokens": [
+        "<*>",
+        "01",
+        "disk",
+        "full",
+        "no",
+        "space",
+        "left",
+        "on",
+        "device",
+        "var",
+        "log"
+      ],
+      "count": 4,
+      "level": "fatal",
+      "firstSeen": 1718427424000,
+      "lastSeen": 1718427568000,
+      "sample": "web-01 disk full: no space left on device /var/log",
+      "parameters": [
+        [
+          "api"
+        ],
+        [
+          "web"
+        ],
+        [
+          "api"
+        ]
+      ]
+    },
+    {
+      "id": "t2",
+      "template": "<*>-02 request: user=<*>",
+      "tokens": [
+        "<*>",
+        "02",
+        "request",
+        "user",
+        "<*>",
+        "path",
+        "api",
+        "<*>",
+        "status",
+        "<*>",
+        "<*>"
+      ],
+      "count": 162,
+      "level": "info",
+      "firstSeen": 1718425804000,
+      "lastSeen": 1718427596000,
+      "sample": "api-02 request: user=frank path=/api/orders status=200 372ms",
+      "parameters": [
+        [
+          "web",
+          "bob",
+          "search",
+          "201",
+          "264ms"
+        ],
+        [
+          "web",
+          "erin",
+          "checkout",
+          "200",
+          "101ms"
+        ],
+        [
+          "web",
+          "alice",
+          "search",
+          "201",
+          "297ms"
+        ],
+        [
+          "api",
+          "frank",
+          "users",
+          "201",
+          "91ms"
+        ],
+        [
+          "web",
+          "carol",
+          "login",
+          "201",
+          "154ms"
+        ],
+        [
+          "api",
+          "frank",
+          "users",
+          "301",
+          "177ms"
+        ],
+        [
+          "api",
+          "erin",
+          "users",
+          "200",
+          "154ms"
+        ],
+        [
+          "web",
+          "frank",
+          "search",
+          "404",
+          "85ms"
+        ],
+        [
+          "web",
+          "carol",
+          "checkout",
+          "200",
+          "218ms"
+        ],
+        [
+          "api",
+          "bob",
+          "users",
+          "201",
+          "145ms"
+        ],
+        [
+          "web",
+          "alice",
+          "search",
+          "200",
+          "212ms"
+        ],
+        [
+          "web",
+          "frank",
+          "login",
+          "200",
+          "27ms"
+        ],
+        [
+          "api",
+          "erin",
+          "checkout",
+          "404",
+          "206ms"
+        ],
+        [
+          "web",
+          "alice",
+          "search",
+          "200",
+          "232ms"
+        ],
+        [
+          "api",
+          "carol",
+          "login",
+          "200",
+          "79ms"
+        ],
+        [
+          "api",
+          "erin",
+          "search",
+          "404",
+          "28ms"
+        ],
+        [
+          "api",
+          "bob",
+          "checkout",
+          "201",
+          "383ms"
+        ],
+        [
+          "web",
+          "alice",
+          "search",
+          "200",
+          "212ms"
+        ],
+        [
+          "web",
+          "erin",
+          "search",
+          "200",
+          "256ms"
+        ],
+        [
+          "api",
+          "erin",
+          "checkout",
+          "200",
+          "43ms"
+        ],
+        [
+          "web",
+          "bob",
+          "users",
+          "404",
+          "252ms"
+        ],
+        [
+          "web",
+          "dave",
+          "login",
+          "301",
+          "339ms"
+        ],
+        [
+          "web",
+          "erin",
+          "search",
+          "200",
+          "52ms"
+        ],
+        [
+          "api",
+          "bob",
+          "checkout",
+          "200",
+          "93ms"
+        ],
+        [
+          "web",
+          "carol",
+          "search",
+          "201",
+          "213ms"
+        ],
+        [
+          "api",
+          "carol",
+          "orders",
+          "200",
+          "219ms"
+        ],
+        [
+          "api",
+          "alice",
+          "checkout",
+          "301",
+          "283ms"
+        ],
+        [
+          "api",
+          "bob",
+          "checkout",
+          "200",
+          "389ms"
+        ],
+        [
+          "web",
+          "alice",
+          "orders",
+          "301",
+          "40ms"
+        ],
+        [
+          "web",
+          "dave",
+          "orders",
+          "201",
+          "409ms"
+        ],
+        [
+          "api",
+          "erin",
+          "login",
+          "201",
+          "370ms"
+        ],
+        [
+          "web",
+          "carol",
+          "search",
+          "404",
+          "89ms"
+        ],
+        [
+          "web",
+          "dave",
+          "users",
+          "404",
+          "92ms"
+        ],
+        [
+          "api",
+          "dave",
+          "search",
+          "201",
+          "378ms"
+        ],
+        [
+          "api",
+          "dave",
+          "checkout",
+          "201",
+          "186ms"
+        ],
+        [
+          "web",
+          "frank",
+          "checkout",
+          "200",
+          "258ms"
+        ],
+        [
+          "web",
+          "bob",
+          "checkout",
+          "201",
+          "146ms"
+        ],
+        [
+          "web",
+          "carol",
+          "users",
+          "200",
+          "379ms"
+        ],
+        [
+          "api",
+          "bob",
+          "login",
+          "200",
+          "299ms"
+        ],
+        [
+          "api",
+          "bob",
+          "users",
+          "201",
+          "156ms"
+        ],
+        [
+          "api",
+          "erin",
+          "checkout",
+          "200",
+          "170ms"
+        ],
+        [
+          "web",
+          "erin",
+          "search",
+          "200",
+          "149ms"
+        ],
+        [
+          "api",
+          "dave",
+          "orders",
+          "200",
+          "418ms"
+        ],
+        [
+          "api",
+          "dave",
+          "login",
+          "201",
+          "370ms"
+        ],
+        [
+          "web",
+          "alice",
+          "orders",
+          "200",
+          "180ms"
+        ],
+        [
+          "api",
+          "frank",
+          "checkout",
+          "404",
+          "118ms"
+        ],
+        [
+          "api",
+          "alice",
+          "search",
+          "201",
+          "337ms"
+        ],
+        [
+          "api",
+          "dave",
+          "orders",
+          "200",
+          "160ms"
+        ],
+        [
+          "api",
+          "alice",
+          "search",
+          "201",
+          "279ms"
+        ],
+        [
+          "web",
+          "bob",
+          "login",
+          "201",
+          "82ms"
+        ],
+        [
+          "web",
+          "dave",
+          "search",
+          "200",
+          "332ms"
+        ],
+        [
+          "api",
+          "dave",
+          "orders",
+          "200",
+          "259ms"
+        ],
+        [
+          "web",
+          "carol",
+          "orders",
+          "200",
+          "291ms"
+        ],
+        [
+          "web",
+          "bob",
+          "login",
+          "301",
+          "320ms"
+        ],
+        [
+          "api",
+          "dave",
+          "search",
+          "200",
+          "385ms"
+        ],
+        [
+          "web",
+          "alice",
+          "checkout",
+          "200",
+          "246ms"
+        ],
+        [
+          "web",
+          "bob",
+          "checkout",
+          "201",
+          "118ms"
+        ],
+        [
+          "web",
+          "bob",
+          "checkout",
+          "404",
+          "277ms"
+        ],
+        [
+          "api",
+          "bob",
+          "search",
+          "200",
+          "257ms"
+        ],
+        [
+          "web",
+          "dave",
+          "search",
+          "404",
+          "324ms"
+        ],
+        [
+          "web",
+          "dave",
+          "login",
+          "200",
+          "100ms"
+        ],
+        [
+          "web",
+          "erin",
+          "users",
+          "301",
+          "139ms"
+        ],
+        [
+          "web",
+          "bob",
+          "orders",
+          "200",
+          "403ms"
+        ],
+        [
+          "web",
+          "dave",
+          "users",
+          "200",
+          "295ms"
+        ],
+        [
+          "api",
+          "alice",
+          "login",
+          "200",
+          "410ms"
+        ],
+        [
+          "web",
+          "bob",
+          "orders",
+          "200",
+          "155ms"
+        ],
+        [
+          "web",
+          "bob",
+          "orders",
+          "404",
+          "371ms"
+        ],
+        [
+          "web",
+          "carol",
+          "users",
+          "200",
+          "204ms"
+        ],
+        [
+          "api",
+          "alice",
+          "orders",
+          "301",
+          "284ms"
+        ],
+        [
+          "api",
+          "carol",
+          "users",
+          "201",
+          "391ms"
+        ],
+        [
+          "api",
+          "erin",
+          "search",
+          "200",
+          "93ms"
+        ],
+        [
+          "web",
+          "frank",
+          "checkout",
+          "201",
+          "42ms"
+        ],
+        [
+          "web",
+          "dave",
+          "users",
+          "200",
+          "338ms"
+        ],
+        [
+          "api",
+          "dave",
+          "search",
+          "404",
+          "273ms"
+        ],
+        [
+          "web",
+          "alice",
+          "login",
+          "200",
+          "329ms"
+        ],
+        [
+          "api",
+          "frank",
+          "orders",
+          "200",
+          "170ms"
+        ],
+        [
+          "api",
+          "alice",
+          "login",
+          "200",
+          "398ms"
+        ],
+        [
+          "web",
+          "bob",
+          "search",
+          "404",
+          "172ms"
+        ],
+        [
+          "api",
+          "dave",
+          "users",
+          "200",
+          "83ms"
+        ],
+        [
+          "web",
+          "bob",
+          "login",
+          "404",
+          "74ms"
+        ],
+        [
+          "web",
+          "alice",
+          "checkout",
+          "301",
+          "324ms"
+        ],
+        [
+          "web",
+          "bob",
+          "search",
+          "301",
+          "93ms"
+        ],
+        [
+          "web",
+          "bob",
+          "users",
+          "404",
+          "58ms"
+        ],
+        [
+          "api",
+          "carol",
+          "orders",
+          "200",
+          "268ms"
+        ],
+        [
+          "api",
+          "erin",
+          "login",
+          "200",
+          "211ms"
+        ],
+        [
+          "web",
+          "bob",
+          "checkout",
+          "404",
+          "33ms"
+        ],
+        [
+          "api",
+          "carol",
+          "login",
+          "201",
+          "399ms"
+        ],
+        [
+          "api",
+          "dave",
+          "login",
+          "404",
+          "221ms"
+        ],
+        [
+          "api",
+          "bob",
+          "checkout",
+          "201",
+          "33ms"
+        ],
+        [
+          "api",
+          "frank",
+          "users",
+          "200",
+          "148ms"
+        ],
+        [
+          "api",
+          "bob",
+          "login",
+          "200",
+          "184ms"
+        ],
+        [
+          "web",
+          "alice",
+          "checkout",
+          "200",
+          "73ms"
+        ],
+        [
+          "web",
+          "alice",
+          "checkout",
+          "200",
+          "114ms"
+        ],
+        [
+          "web",
+          "erin",
+          "login",
+          "201",
+          "393ms"
+        ],
+        [
+          "api",
+          "carol",
+          "orders",
+          "404",
+          "409ms"
+        ],
+        [
+          "api",
+          "carol",
+          "users",
+          "200",
+          "345ms"
+        ],
+        [
+          "api",
+          "frank",
+          "orders",
+          "301",
+          "23ms"
+        ],
+        [
+          "web",
+          "frank",
+          "checkout",
+          "201",
+          "331ms"
+        ],
+        [
+          "api",
+          "dave",
+          "users",
+          "200",
+          "145ms"
+        ],
+        [
+          "api",
+          "frank",
+          "login",
+          "200",
+          "325ms"
+        ]
+      ]
+    },
+    {
+      "id": "t10",
+      "template": "<*>-02 request: user=<*>",
+      "tokens": [
+        "<*>",
+        "02",
+        "request",
+        "user",
+        "<*>",
+        "path",
+        "health",
+        "status",
+        "<*>",
+        "<*>"
+      ],
+      "count": 23,
+      "level": "info",
+      "firstSeen": 1718425882000,
+      "lastSeen": 1718427447000,
+      "sample": "api-02 request: user=frank path=/health status=200 81ms",
+      "parameters": [
+        [
+          "web",
+          "bob",
+          "101ms"
+        ],
+        [
+          "web",
+          "dave",
+          "301",
+          "305ms"
+        ],
+        [
+          "api",
+          "carol",
+          "200",
+          "99ms"
+        ],
+        [
+          "api",
+          "carol",
+          "200",
+          "402ms"
+        ],
+        [
+          "api",
+          "erin",
+          "200",
+          "281ms"
+        ],
+        [
+          "web",
+          "bob",
+          "404",
+          "220ms"
+        ],
+        [
+          "api",
+          "carol",
+          "200",
+          "352ms"
+        ],
+        [
+          "web",
+          "carol",
+          "404",
+          "39ms"
+        ],
+        [
+          "api",
+          "frank",
+          "200",
+          "392ms"
+        ],
+        [
+          "web",
+          "erin",
+          "200",
+          "164ms"
+        ],
+        [
+          "api",
+          "alice",
+          "301",
+          "277ms"
+        ],
+        [
+          "web",
+          "carol",
+          "200",
+          "383ms"
+        ],
+        [
+          "api",
+          "alice",
+          "404",
+          "346ms"
+        ],
+        [
+          "web",
+          "frank",
+          "404",
+          "232ms"
+        ],
+        [
+          "web",
+          "bob",
+          "200",
+          "306ms"
+        ],
+        [
+          "web",
+          "alice",
+          "200",
+          "32ms"
+        ],
+        [
+          "api",
+          "dave",
+          "201",
+          "204ms"
+        ],
+        [
+          "web",
+          "carol",
+          "301",
+          "25ms"
+        ],
+        [
+          "api",
+          "bob",
+          "404",
+          "291ms"
+        ],
+        [
+          "web",
+          "bob",
+          "404",
+          "70ms"
+        ],
+        [
+          "api",
+          "bob",
+          "200",
+          "385ms"
+        ],
+        [
+          "web",
+          "carol",
+          "200",
+          "327ms"
+        ]
+      ]
+    },
+    {
+      "id": "t7",
+      "template": "<*>-02 connection refused to db.internal port <*>",
+      "tokens": [
+        "<*>",
+        "02",
+        "connection",
+        "refused",
+        "to",
+        "db",
+        "internal",
+        "port",
+        "<*>"
+      ],
+      "count": 25,
+      "level": "error",
+      "firstSeen": 1718425832000,
+      "lastSeen": 1718427580000,
+      "sample": "web-02 connection refused to db.internal port 443",
+      "parameters": [
+        [
+          "27017"
+        ],
+        [
+          "api",
+          "443"
+        ],
+        [
+          "api",
+          "6379"
+        ],
+        [
+          "web",
+          "27017"
+        ],
+        [
+          "web",
+          "6379"
+        ],
+        [
+          "web",
+          "5432"
+        ],
+        [
+          "api",
+          "6379"
+        ],
+        [
+          "web",
+          "443"
+        ],
+        [
+          "web",
+          "6379"
+        ],
+        [
+          "web",
+          "5432"
+        ],
+        [
+          "web",
+          "5432"
+        ],
+        [
+          "api",
+          "443"
+        ],
+        [
+          "web",
+          "443"
+        ],
+        [
+          "api",
+          "5432"
+        ],
+        [
+          "api",
+          "27017"
+        ],
+        [
+          "web",
+          "443"
+        ],
+        [
+          "web",
+          "27017"
+        ],
+        [
+          "api",
+          "443"
+        ],
+        [
+          "web",
+          "6379"
+        ],
+        [
+          "web",
+          "5432"
+        ],
+        [
+          "web",
+          "6379"
+        ],
+        [
+          "web",
+          "443"
+        ],
+        [
+          "web",
+          "5432"
+        ],
+        [
+          "web",
+          "6379"
+        ]
+      ]
+    },
+    {
+      "id": "t15",
+      "template": "<*>-02 timeout waiting for /health after <*>",
+      "tokens": [
+        "<*>",
+        "02",
+        "timeout",
+        "waiting",
+        "for",
+        "health",
+        "after",
+        "<*>"
+      ],
+      "count": 7,
+      "level": "error",
+      "firstSeen": 1718425920000,
+      "lastSeen": 1718427000000,
+      "sample": "api-02 timeout waiting for /health after 7594ms",
+      "parameters": [
+        [
+          "web",
+          "5148ms"
+        ],
+        [
+          "web",
+          "5123ms"
+        ],
+        [
+          "api",
+          "6407ms"
+        ],
+        [
+          "web",
+          "6962ms"
+        ],
+        [
+          "web",
+          "5903ms"
+        ],
+        [
+          "api",
+          "7951ms"
+        ]
+      ]
+    },
+    {
+      "id": "t17",
+      "template": "<*>-02 timeout waiting for /api/<*>",
+      "tokens": [
+        "<*>",
+        "02",
+        "timeout",
+        "waiting",
+        "for",
+        "api",
+        "<*>",
+        "after",
+        "<*>"
+      ],
+      "count": 21,
+      "level": "error",
+      "firstSeen": 1718426100000,
+      "lastSeen": 1718427540000,
+      "sample": "web-02 timeout waiting for /api/checkout after 6517ms",
+      "parameters": [
+        [
+          "api",
+          "login",
+          "5389ms"
+        ],
+        [
+          "web",
+          "search",
+          "6023ms"
+        ],
+        [
+          "web",
+          "users",
+          "7435ms"
+        ],
+        [
+          "api",
+          "checkout",
+          "6248ms"
+        ],
+        [
+          "web",
+          "users",
+          "7248ms"
+        ],
+        [
+          "web",
+          "users",
+          "7590ms"
+        ],
+        [
+          "api",
+          "orders",
+          "6489ms"
+        ],
+        [
+          "web",
+          "users",
+          "7805ms"
+        ],
+        [
+          "api",
+          "search",
+          "5054ms"
+        ],
+        [
+          "api",
+          "users",
+          "7351ms"
+        ],
+        [
+          "web",
+          "orders",
+          "5509ms"
+        ],
+        [
+          "api",
+          "search",
+          "6664ms"
+        ],
+        [
+          "web",
+          "login",
+          "5950ms"
+        ],
+        [
+          "web",
+          "login",
+          "7698ms"
+        ],
+        [
+          "api",
+          "orders",
+          "6345ms"
+        ],
+        [
+          "web",
+          "orders",
+          "6485ms"
+        ],
+        [
+          "web",
+          "users",
+          "6703ms"
+        ],
+        [
+          "web",
+          "users",
+          "6002ms"
+        ],
+        [
+          "web",
+          "checkout",
+          "7849ms"
+        ],
+        [
+          "web",
+          "search",
+          "7686ms"
+        ]
+      ]
+    },
+    {
+      "id": "t18",
+      "template": "<*>-02 slow request: path=/api/<*>took<*>",
+      "tokens": [
+        "<*>",
+        "02",
+        "slow",
+        "request",
+        "path",
+        "api",
+        "<*>",
+        "took",
+        "<*>"
+      ],
+      "count": 3,
+      "level": "warn",
+      "firstSeen": 1718426100000,
+      "lastSeen": 1718426340000,
+      "sample": "api-02 slow request: path=/api/search took 2777ms",
+      "parameters": [
+        [
+          "web",
+          "users",
+          "1566ms"
+        ],
+        [
+          "web",
+          "users",
+          "2413ms"
+        ]
+      ]
+    },
+    {
+      "id": "t22",
+      "template": "web-02 slow request: path=/health took 1516ms",
+      "tokens": [
+        "web",
+        "02",
+        "slow",
+        "request",
+        "path",
+        "health",
+        "took",
+        "1516ms"
+      ],
+      "count": 1,
+      "level": "warn",
+      "firstSeen": 1718427000000,
+      "lastSeen": 1718427000000,
+      "sample": "web-02 slow request: path=/health took 1516ms",
+      "parameters": []
+    },
+    {
+      "id": "t19",
+      "template": "api-02 NullPointerException in CheckoutService for user <*>",
+      "tokens": [
+        "api",
+        "02",
+        "NullPointerException",
+        "in",
+        "CheckoutService",
+        "for",
+        "user",
+        "<*>"
+      ],
+      "count": 3,
+      "level": "error",
+      "firstSeen": 1718426640000,
+      "lastSeen": 1718426940000,
+      "sample": "api-02 NullPointerException in CheckoutService for user bob",
+      "parameters": [
+        [
+          "carol"
+        ],
+        [
+          "alice"
+        ]
+      ]
+    },
+    {
+      "id": "t24",
+      "template": "<*>-02 disk full: no space left on device /var/log",
+      "tokens": [
+        "<*>",
+        "02",
+        "disk",
+        "full",
+        "no",
+        "space",
+        "left",
+        "on",
+        "device",
+        "var",
+        "log"
+      ],
+      "count": 6,
+      "level": "fatal",
+      "firstSeen": 1718427421000,
+      "lastSeen": 1718427594000,
+      "sample": "api-02 disk full: no space left on device /var/log",
+      "parameters": [
+        [
+          "web"
+        ],
+        [
+          "api"
+        ],
+        [
+          "api"
+        ],
+        [
+          "api"
+        ]
+      ]
+    },
+    {
+      "id": "t4",
+      "template": "worker-01 request: user=<*>>*>",
+      "tokens": [
+        "worker",
+        "01",
+        "request",
+        "user",
+        "<*>",
+        "path",
+        "health",
+        "status",
+        "<*>",
+        "<*>"
+      ],
+      "count": 16,
+      "level": "info",
+      "firstSeen": 1718425810000,
+      "lastSeen": 1718427481000,
+      "sample": "worker-01 request: user=carol path=/health status=200 199ms",
+      "parameters": [
+        [
+          "frank",
+          "47ms"
+        ],
+        [
+          "frank",
+          "33ms"
+        ],
+        [
+          "carol",
+          "203ms"
+        ],
+        [
+          "frank",
+          "404",
+          "260ms"
+        ],
+        [
+          "erin",
+          "301",
+          "298ms"
+        ],
+        [
+          "bob",
+          "200",
+          "224ms"
+        ],
+        [
+          "carol",
+          "200",
+          "197ms"
+        ],
+        [
+          "alice",
+          "201",
+          "225ms"
+        ],
+        [
+          "alice",
+          "200",
+          "187ms"
+        ],
+        [
+          "dave",
+          "201",
+          "101ms"
+        ],
+        [
+          "frank",
+          "200",
+          "243ms"
+        ],
+        [
+          "carol",
+          "200",
+          "414ms"
+        ],
+        [
+          "erin",
+          "301",
+          "315ms"
+        ],
+        [
+          "alice",
+          "404",
+          "214ms"
+        ],
+        [
+          "carol",
+          "200",
+          "269ms"
+        ]
+      ]
+    },
+    {
+      "id": "t6",
+      "template": "worker-01 request: user=<*>",
+      "tokens": [
+        "worker",
+        "01",
+        "request",
+        "user",
+        "<*>",
+        "path",
+        "api",
+        "<*>",
+        "status",
+        "<*>",
+        "<*>"
+      ],
+      "count": 80,
+      "level": "info",
+      "firstSeen": 1718425831000,
+      "lastSeen": 1718427563000,
+      "sample": "worker-01 request: user=alice path=/api/checkout status=200 386ms",
+      "parameters": [
+        [
+          "carol",
+          "login",
+          "301",
+          "274ms"
+        ],
+        [
+          "bob",
+          "search",
+          "200",
+          "93ms"
+        ],
+        [
+          "bob",
+          "orders",
+          "200",
+          "413ms"
+        ],
+        [
+          "erin",
+          "search",
+          "301",
+          "239ms"
+        ],
+        [
+          "bob",
+          "search",
+          "404",
+          "394ms"
+        ],
+        [
+          "carol",
+          "orders",
+          "200",
+          "354ms"
+        ],
+        [
+          "erin",
+          "login",
+          "200",
+          "404ms"
+        ],
+        [
+          "frank",
+          "search",
+          "200",
+          "49ms"
+        ],
+        [
+          "erin",
+          "orders",
+          "200",
+          "266ms"
+        ],
+        [
+          "dave",
+          "users",
+          "200",
+          "150ms"
+        ],
+        [
+          "carol",
+          "orders",
+          "200",
+          "221ms"
+        ],
+        [
+          "carol",
+          "login",
+          "200",
+          "217ms"
+        ],
+        [
+          "carol",
+          "login",
+          "404",
+          "44ms"
+        ],
+        [
+          "carol",
+          "users",
+          "301",
+          "281ms"
+        ],
+        [
+          "bob",
+          "checkout",
+          "200",
+          "224ms"
+        ],
+        [
+          "frank",
+          "checkout",
+          "200",
+          "89ms"
+        ],
+        [
+          "dave",
+          "users",
+          "200",
+          "362ms"
+        ],
+        [
+          "bob",
+          "checkout",
+          "200",
+          "186ms"
+        ],
+        [
+          "erin",
+          "users",
+          "200",
+          "95ms"
+        ],
+        [
+          "bob",
+          "login",
+          "200",
+          "401ms"
+        ],
+        [
+          "bob",
+          "search",
+          "200",
+          "51ms"
+        ],
+        [
+          "frank",
+          "search",
+          "200",
+          "33ms"
+        ],
+        [
+          "erin",
+          "search",
+          "200",
+          "343ms"
+        ],
+        [
+          "alice",
+          "orders",
+          "404",
+          "128ms"
+        ],
+        [
+          "erin",
+          "orders",
+          "200",
+          "127ms"
+        ],
+        [
+          "erin",
+          "login",
+          "404",
+          "307ms"
+        ],
+        [
+          "dave",
+          "search",
+          "200",
+          "54ms"
+        ],
+        [
+          "dave",
+          "login",
+          "200",
+          "89ms"
+        ],
+        [
+          "erin",
+          "checkout",
+          "200",
+          "338ms"
+        ],
+        [
+          "erin",
+          "users",
+          "200",
+          "88ms"
+        ],
+        [
+          "dave",
+          "search",
+          "200",
+          "282ms"
+        ],
+        [
+          "bob",
+          "users",
+          "200",
+          "217ms"
+        ],
+        [
+          "dave",
+          "login",
+          "200",
+          "51ms"
+        ],
+        [
+          "frank",
+          "search",
+          "200",
+          "131ms"
+        ],
+        [
+          "dave",
+          "checkout",
+          "200",
+          "89ms"
+        ],
+        [
+          "dave",
+          "users",
+          "200",
+          "200ms"
+        ],
+        [
+          "alice",
+          "orders",
+          "404",
+          "236ms"
+        ],
+        [
+          "dave",
+          "login",
+          "301",
+          "281ms"
+        ],
+        [
+          "bob",
+          "login",
+          "301",
+          "65ms"
+        ],
+        [
+          "dave",
+          "login",
+          "404",
+          "362ms"
+        ],
+        [
+          "dave",
+          "search",
+          "200",
+          "58ms"
+        ],
+        [
+          "alice",
+          "users",
+          "301",
+          "197ms"
+        ],
+        [
+          "alice",
+          "search",
+          "201",
+          "296ms"
+        ],
+        [
+          "frank",
+          "users",
+          "404",
+          "155ms"
+        ],
+        [
+          "carol",
+          "search",
+          "200",
+          "82ms"
+        ],
+        [
+          "erin",
+          "orders",
+          "200",
+          "412ms"
+        ],
+        [
+          "alice",
+          "users",
+          "200",
+          "264ms"
+        ],
+        [
+          "dave",
+          "search",
+          "200",
+          "278ms"
+        ],
+        [
+          "erin",
+          "search",
+          "200",
+          "179ms"
+        ],
+        [
+          "erin",
+          "checkout",
+          "200",
+          "122ms"
+        ],
+        [
+          "carol",
+          "checkout",
+          "200",
+          "29ms"
+        ],
+        [
+          "dave",
+          "users",
+          "301",
+          "249ms"
+        ],
+        [
+          "carol",
+          "checkout",
+          "404",
+          "336ms"
+        ],
+        [
+          "carol",
+          "login",
+          "200",
+          "54ms"
+        ],
+        [
+          "dave",
+          "login",
+          "200",
+          "137ms"
+        ],
+        [
+          "dave",
+          "users",
+          "200",
+          "48ms"
+        ],
+        [
+          "alice",
+          "users",
+          "301",
+          "303ms"
+        ],
+        [
+          "bob",
+          "search",
+          "404",
+          "168ms"
+        ],
+        [
+          "alice",
+          "users",
+          "200",
+          "45ms"
+        ],
+        [
+          "carol",
+          "users",
+          "200",
+          "298ms"
+        ],
+        [
+          "bob",
+          "orders",
+          "200",
+          "177ms"
+        ],
+        [
+          "erin",
+          "search",
+          "200",
+          "117ms"
+        ],
+        [
+          "bob",
+          "users",
+          "404",
+          "103ms"
+        ],
+        [
+          "bob",
+          "checkout",
+          "301",
+          "112ms"
+        ],
+        [
+          "erin",
+          "search",
+          "201",
+          "331ms"
+        ],
+        [
+          "carol",
+          "users",
+          "201",
+          "222ms"
+        ],
+        [
+          "erin",
+          "users",
+          "404",
+          "267ms"
+        ],
+        [
+          "frank",
+          "users",
+          "200",
+          "351ms"
+        ],
+        [
+          "bob",
+          "orders",
+          "201",
+          "351ms"
+        ],
+        [
+          "dave",
+          "checkout",
+          "200",
+          "208ms"
+        ],
+        [
+          "dave",
+          "checkout",
+          "301",
+          "189ms"
+        ],
+        [
+          "bob",
+          "checkout",
+          "404",
+          "308ms"
+        ],
+        [
+          "frank",
+          "orders",
+          "404",
+          "103ms"
+        ],
+        [
+          "alice",
+          "search",
+          "404",
+          "51ms"
+        ],
+        [
+          "bob",
+          "login",
+          "201",
+          "358ms"
+        ],
+        [
+          "erin",
+          "search",
+          "201",
+          "179ms"
+        ],
+        [
+          "dave",
+          "checkout",
+          "301",
+          "388ms"
+        ],
+        [
+          "dave",
+          "login",
+          "201",
+          "362ms"
+        ],
+        [
+          "carol",
+          "users",
+          "200",
+          "293ms"
+        ]
+      ]
+    },
+    {
+      "id": "t9",
+      "template": "worker-01 slow request: path=/api/users took 2218ms",
+      "tokens": [
+        "worker",
+        "01",
+        "slow",
+        "request",
+        "path",
+        "api",
+        "users",
+        "took",
+        "2218ms"
+      ],
+      "count": 1,
+      "level": "warn",
+      "firstSeen": 1718425800000,
+      "lastSeen": 1718425800000,
+      "sample": "worker-01 slow request: path=/api/users took 2218ms",
+      "parameters": []
+    },
+    {
+      "id": "t12",
+      "template": "worker-01 connection refused to db.internal port <*>",
+      "tokens": [
+        "worker",
+        "01",
+        "connection",
+        "refused",
+        "to",
+        "db",
+        "internal",
+        "port",
+        "<*>"
+      ],
+      "count": 16,
+      "level": "error",
+      "firstSeen": 1718425910000,
+      "lastSeen": 1718427490000,
+      "sample": "worker-01 connection refused to db.internal port 6379",
+      "parameters": [
+        [
+          "27017"
+        ],
+        [
+          "27017"
+        ],
+        [
+          "27017"
+        ],
+        [
+          "443"
+        ],
+        [
+          "5432"
+        ],
+        [
+          "27017"
+        ],
+        [
+          "5432"
+        ],
+        [
+          "5432"
+        ],
+        [
+          "443"
+        ],
+        [
+          "5432"
+        ],
+        [
+          "443"
+        ],
+        [
+          "27017"
+        ],
+        [
+          "27017"
+        ],
+        [
+          "443"
+        ]
+      ]
+    },
+    {
+      "id": "t16",
+      "template": "worker-01 NullPointerException in CheckoutService for user dave",
+      "tokens": [
+        "worker",
+        "01",
+        "NullPointerException",
+        "in",
+        "CheckoutService",
+        "for",
+        "user",
+        "dave"
+      ],
+      "count": 1,
+      "level": "error",
+      "firstSeen": 1718425980000,
+      "lastSeen": 1718425980000,
+      "sample": "worker-01 NullPointerException in CheckoutService for user dave",
+      "parameters": []
+    },
+    {
+      "id": "t21",
+      "template": "worker-01 timeout waiting for /<*>>",
+      "tokens": [
+        "worker",
+        "01",
+        "timeout",
+        "waiting",
+        "for",
+        "<*>",
+        "<*>",
+        "<*>",
+        "<*>"
+      ],
+      "count": 10,
+      "level": "error",
+      "firstSeen": 1718426707000,
+      "lastSeen": 1718426760000,
+      "sample": "worker-01 timeout waiting for /api/search after 7074ms",
+      "parameters": [
+        [
+          "checkout",
+          "5750ms"
+        ],
+        [
+          "orders",
+          "7599ms"
+        ],
+        [
+          "health",
+          "after",
+          "7043ms"
+        ],
+        [
+          "api",
+          "login",
+          "after",
+          "7822ms"
+        ],
+        [
+          "api",
+          "users",
+          "after",
+          "6465ms"
+        ],
+        [
+          "api",
+          "users",
+          "after",
+          "5724ms"
+        ],
+        [
+          "api",
+          "users",
+          "after",
+          "5310ms"
+        ],
+        [
+          "api",
+          "orders",
+          "after",
+          "5546ms"
+        ],
+        [
+          "api",
+          "search",
+          "after",
+          "7683ms"
+        ]
+      ]
+    },
+    {
+      "id": "t26",
+      "template": "worker-01 disk full: no space left on device /var/log",
+      "tokens": [
+        "worker",
+        "01",
+        "disk",
+        "full",
+        "no",
+        "space",
+        "left",
+        "on",
+        "device",
+        "var",
+        "log"
+      ],
+      "count": 2,
+      "level": "fatal",
+      "firstSeen": 1718427446000,
+      "lastSeen": 1718427475000,
+      "sample": "worker-01 disk full: no space left on device /var/log",
+      "parameters": []
+    },
+    {
+      "id": "t11",
+      "template": "{\"time\":\"2024-06-15T10:<*>>>>>>>>>:00.000Z\",\"level\":\"info\",\"logger\":\"audit\",\"msg\":\"audit event\",\"host\":\"<*>>>>>>>>\"<*>user\":\"<*>y\":<*>>*>>*>>><*>",
+      "tokens": [
+        "time",
+        "2024",
+        "06",
+        "15T10",
+        "<*>",
+        "00",
+        "000Z",
+        "level",
+        "info",
+        "logger",
+        "audit",
+        "msg",
+        "audit",
+        "event",
+        "host",
+        "<*>",
+        "<*>",
+        "user",
+        "<*>",
+        "country",
+        "<*>"
+      ],
+      "count": 10,
+      "level": "info",
+      "firstSeen": null,
+      "lastSeen": null,
+      "sample": "{\"time\":\"2024-06-15T10:01:00.000Z\",\"level\":\"info\",\"logger\":\"audit\",\"msg\":\"audit event\",\"host\":\"api-01\",\"user\":\"erin\",\"country\":\"BR\"}",
+      "parameters": [
+        [
+          "03",
+          "web",
+          "dave"
+        ],
+        [
+          "05",
+          "api",
+          "02",
+          "frank",
+          "JP"
+        ],
+        [
+          "06",
+          "web",
+          "02",
+          "dave",
+          "JP"
+        ],
+        [
+          "11",
+          "worker",
+          "01",
+          "erin",
+          "IN"
+        ],
+        [
+          "13",
+          "web",
+          "01",
+          "bob",
+          "US"
+        ],
+        [
+          "14",
+          "web",
+          "01",
+          "carol",
+          "US"
+        ],
+        [
+          "22",
+          "api",
+          "02",
+          "bob",
+          "JP"
+        ],
+        [
+          "23",
+          "api",
+          "02",
+          "dave",
+          "DE"
+        ],
+        [
+          "25",
+          "api",
+          "01",
+          "frank",
+          "JP"
+        ]
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "9ca1b4db",
+      "fingerprint": "9ca1b4db",
+      "title": "<*>-02 connection refused to db.internal port <*>",
+      "level": "error",
+      "count": 25,
+      "firstSeen": 1718425832000,
+      "lastSeen": 1718427580000,
+      "timeline": [
+        {
+          "bucket": "2024-06-15 04:30",
+          "count": 2
+        },
+        {
+          "bucket": "2024-06-15 04:33",
+          "count": 2
+        },
+        {
+          "bucket": "2024-06-15 04:35",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:36",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:37",
+          "count": 2
+        },
+        {
+          "bucket": "2024-06-15 04:40",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:41",
+          "count": 2
+        },
+        {
+          "bucket": "2024-06-15 04:42",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:43",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:47",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:48",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:49",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:51",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:52",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:53",
+          "count": 2
+        },
+        {
+          "bucket": "2024-06-15 04:54",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:56",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:57",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:59",
+          "count": 2
+        }
+      ],
+      "samples": [
+        "2024-06-15 10:00:32 [ERROR] web-02 connection refused to db.internal port 443",
+        "2024-06-15 10:00:41 [ERROR] web-02 connection refused to db.internal port 27017",
+        "2024-06-15 10:03:12 [ERROR] api-02 connection refused to db.internal port 443",
+        "2024-06-15 10:03:08 [ERROR] api-02 connection refused to db.internal port 6379",
+        "2024-06-15 10:05:41 [ERROR] web-02 connection refused to db.internal port 27017"
+      ],
+      "isNew": false,
+      "sparkline": "██▅▅█▅█▅▅▅▅▅▅▅█▅▅▅█"
+    },
+    {
+      "id": "2e9d8b5d",
+      "fingerprint": "2e9d8b5d",
+      "title": "<*>-02 timeout waiting for /api/<*>",
+      "level": "error",
+      "count": 21,
+      "firstSeen": 1718426100000,
+      "lastSeen": 1718427540000,
+      "timeline": [
+        {
+          "bucket": "2024-06-15 04:35",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:38",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:45",
+          "count": 17
+        },
+        {
+          "bucket": "2024-06-15 04:58",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:59",
+          "count": 1
+        }
+      ],
+      "samples": [
+        "2024-06-15 10:05:00 [ERROR] web-02 timeout waiting for /api/checkout after 6517ms",
+        "2024-06-15 10:08:00 [ERROR] api-02 timeout waiting for /api/login after 5389ms",
+        "2024-06-15 10:15:27 [ERROR] web-02 timeout waiting for /api/search after 6023ms",
+        "2024-06-15 10:15:53 [ERROR] web-02 timeout waiting for /api/users after 7435ms",
+        "2024-06-15 10:15:40 [ERROR] api-02 timeout waiting for /api/checkout after 6248ms"
+      ],
+      "isNew": false,
+      "sparkline": "▁▁█▁▁"
+    },
+    {
+      "id": "f565ba6c",
+      "fingerprint": "f565ba6c",
+      "title": "<*>-01 connection refused to db.internal port <*>",
+      "level": "error",
+      "count": 19,
+      "firstSeen": 1718425961000,
+      "lastSeen": 1718427514000,
+      "timeline": [
+        {
+          "bucket": "2024-06-15 04:32",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:36",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:38",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:39",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:40",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:44",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:45",
+          "count": 2
+        },
+        {
+          "bucket": "2024-06-15 04:46",
+          "count": 2
+        },
+        {
+          "bucket": "2024-06-15 04:48",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:49",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:50",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:52",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:54",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:55",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:56",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:57",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:58",
+          "count": 1
+        }
+      ],
+      "samples": [
+        "2024-06-15 10:02:41 [ERROR] api-01 connection refused to db.internal port 6379",
+        "2024-06-15 10:06:29 [ERROR] api-01 connection refused to db.internal port 6379",
+        "2024-06-15 10:08:54 [ERROR] api-01 connection refused to db.internal port 6379",
+        "2024-06-15 10:09:10 [ERROR] web-01 connection refused to db.internal port 27017",
+        "2024-06-15 10:10:02 [ERROR] web-01 connection refused to db.internal port 443"
+      ],
+      "isNew": false,
+      "sparkline": "▅▅▅▅▅▅██▅▅▅▅▅▅▅▅▅"
+    },
+    {
+      "id": "4fc29aec",
+      "fingerprint": "4fc29aec",
+      "title": "worker-01 connection refused to db.internal port <*>",
+      "level": "error",
+      "count": 16,
+      "firstSeen": 1718425910000,
+      "lastSeen": 1718427490000,
+      "timeline": [
+        {
+          "bucket": "2024-06-15 04:31",
+          "count": 2
+        },
+        {
+          "bucket": "2024-06-15 04:32",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:34",
+          "count": 2
+        },
+        {
+          "bucket": "2024-06-15 04:35",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:38",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:39",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:42",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:43",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:44",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:47",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:50",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:51",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:55",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:58",
+          "count": 1
+        }
+      ],
+      "samples": [
+        "2024-06-15 10:01:59 [ERROR] worker-01 connection refused to db.internal port 6379",
+        "2024-06-15 10:01:50 [ERROR] worker-01 connection refused to db.internal port 6379",
+        "2024-06-15 10:02:58 [ERROR] worker-01 connection refused to db.internal port 27017",
+        "2024-06-15 10:04:59 [ERROR] worker-01 connection refused to db.internal port 27017",
+        "2024-06-15 10:04:48 [ERROR] worker-01 connection refused to db.internal port 27017"
+      ],
+      "isNew": false,
+      "sparkline": "█▅█▅▅▅▅▅▅▅▅▅▅▅"
+    },
+    {
+      "id": "51b8a8a5",
+      "fingerprint": "51b8a8a5",
+      "title": "worker-01 timeout waiting for /<*>>",
+      "level": "error",
+      "count": 10,
+      "firstSeen": 1718426707000,
+      "lastSeen": 1718426760000,
+      "timeline": [
+        {
+          "bucket": "2024-06-15 04:45",
+          "count": 9
+        },
+        {
+          "bucket": "2024-06-15 04:46",
+          "count": 1
+        }
+      ],
+      "samples": [
+        "2024-06-15 10:15:39 [ERROR] worker-01 timeout waiting for /api/search after 7074ms",
+        "2024-06-15 10:15:12 [ERROR] worker-01 timeout waiting for /api/checkout after 5750ms",
+        "2024-06-15 10:15:52 [ERROR] worker-01 timeout waiting for /api/orders after 7599ms",
+        "2024-06-15 10:15:44 [ERROR] worker-01 timeout waiting for /health after 7043ms",
+        "2024-06-15 10:15:50 [ERROR] worker-01 timeout waiting for /api/login after 7822ms"
+      ],
+      "isNew": false,
+      "sparkline": "█▂"
+    },
+    {
+      "id": "1944c1da",
+      "fingerprint": "1944c1da",
+      "title": "<*>-01 timeout waiting for /api/<*>",
+      "level": "error",
+      "count": 9,
+      "firstSeen": 1718425860000,
+      "lastSeen": 1718427300000,
+      "timeline": [
+        {
+          "bucket": "2024-06-15 04:31",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:34",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:45",
+          "count": 6
+        },
+        {
+          "bucket": "2024-06-15 04:55",
+          "count": 1
+        }
+      ],
+      "samples": [
+        "2024-06-15 10:01:00 [ERROR] api-01 timeout waiting for /api/checkout after 7042ms",
+        "2024-06-15 10:04:00 [ERROR] web-01 timeout waiting for /api/checkout after 5104ms",
+        "2024-06-15 10:15:47 [ERROR] api-01 timeout waiting for /api/checkout after 5764ms",
+        "2024-06-15 10:15:02 [ERROR] api-01 timeout waiting for /api/checkout after 6580ms",
+        "2024-06-15 10:15:57 [ERROR] web-01 timeout waiting for /api/login after 5511ms"
+      ],
+      "isNew": false,
+      "sparkline": "▂▂█▂"
+    },
+    {
+      "id": "f260924a",
+      "fingerprint": "f260924a",
+      "title": "<*>-02 timeout waiting for /health after <*>",
+      "level": "error",
+      "count": 7,
+      "firstSeen": 1718425920000,
+      "lastSeen": 1718427000000,
+      "timeline": [
+        {
+          "bucket": "2024-06-15 04:32",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:45",
+          "count": 5
+        },
+        {
+          "bucket": "2024-06-15 04:50",
+          "count": 1
+        }
+      ],
+      "samples": [
+        "2024-06-15 10:02:00 [ERROR] api-02 timeout waiting for /health after 7594ms",
+        "2024-06-15 10:15:06 [ERROR] web-02 timeout waiting for /health after 5148ms",
+        "2024-06-15 10:15:59 [ERROR] web-02 timeout waiting for /health after 5123ms",
+        "2024-06-15 10:15:23 [ERROR] api-02 timeout waiting for /health after 6407ms",
+        "2024-06-15 10:15:07 [ERROR] web-02 timeout waiting for /health after 6962ms"
+      ],
+      "isNew": false,
+      "sparkline": "▂█▂"
+    },
+    {
+      "id": "69a1481a",
+      "fingerprint": "69a1481a",
+      "title": "<*>-02 disk full: no space left on device /var/log",
+      "level": "fatal",
+      "count": 6,
+      "firstSeen": 1718427421000,
+      "lastSeen": 1718427594000,
+      "timeline": [
+        {
+          "bucket": "2024-06-15 04:57",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:58",
+          "count": 2
+        },
+        {
+          "bucket": "2024-06-15 04:59",
+          "count": 3
+        }
+      ],
+      "samples": [
+        "2024-06-15 10:27:01 [FATAL] api-02 disk full: no space left on device /var/log",
+        "2024-06-15 10:28:16 [FATAL] api-02 disk full: no space left on device /var/log",
+        "2024-06-15 10:28:47 [FATAL] web-02 disk full: no space left on device /var/log",
+        "2024-06-15 10:29:02 [FATAL] api-02 disk full: no space left on device /var/log",
+        "2024-06-15 10:29:30 [FATAL] api-02 disk full: no space left on device /var/log"
+      ],
+      "isNew": true,
+      "sparkline": "▃▆█"
+    },
+    {
+      "id": "03791483",
+      "fingerprint": "03791483",
+      "title": "<*>-01 disk full: no space left on device /var/log",
+      "level": "fatal",
+      "count": 4,
+      "firstSeen": 1718427424000,
+      "lastSeen": 1718427568000,
+      "timeline": [
+        {
+          "bucket": "2024-06-15 04:57",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:58",
+          "count": 2
+        },
+        {
+          "bucket": "2024-06-15 04:59",
+          "count": 1
+        }
+      ],
+      "samples": [
+        "2024-06-15 10:27:04 [FATAL] web-01 disk full: no space left on device /var/log",
+        "2024-06-15 10:28:23 [FATAL] api-01 disk full: no space left on device /var/log",
+        "2024-06-15 10:28:14 [FATAL] web-01 disk full: no space left on device /var/log",
+        "2024-06-15 10:29:28 [FATAL] api-01 disk full: no space left on device /var/log"
+      ],
+      "isNew": true,
+      "sparkline": "▅█▅"
+    },
+    {
+      "id": "88ab5731",
+      "fingerprint": "88ab5731",
+      "title": "api-02 NullPointerException in CheckoutService for user <*>",
+      "level": "error",
+      "count": 3,
+      "firstSeen": 1718426640000,
+      "lastSeen": 1718426940000,
+      "timeline": [
+        {
+          "bucket": "2024-06-15 04:44",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:48",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:49",
+          "count": 1
+        }
+      ],
+      "samples": [
+        "2024-06-15 10:14:00 [ERROR] api-02 NullPointerException in CheckoutService for user bob",
+        "2024-06-15 10:18:00 [ERROR] api-02 NullPointerException in CheckoutService for user carol",
+        "2024-06-15 10:19:00 [ERROR] api-02 NullPointerException in CheckoutService for user alice"
+      ],
+      "isNew": false,
+      "sparkline": "███"
+    },
+    {
+      "id": "c7a8315f",
+      "fingerprint": "c7a8315f",
+      "title": "<*>-01 timeout waiting for /health after <*>",
+      "level": "error",
+      "count": 3,
+      "firstSeen": 1718426719000,
+      "lastSeen": 1718426734000,
+      "timeline": [
+        {
+          "bucket": "2024-06-15 04:45",
+          "count": 3
+        }
+      ],
+      "samples": [
+        "2024-06-15 10:15:32 [ERROR] web-01 timeout waiting for /health after 5975ms",
+        "2024-06-15 10:15:19 [ERROR] api-01 timeout waiting for /health after 6528ms",
+        "2024-06-15 10:15:34 [ERROR] web-01 timeout waiting for /health after 5440ms"
+      ],
+      "isNew": false,
+      "sparkline": "█"
+    },
+    {
+      "id": "64879b43",
+      "fingerprint": "64879b43",
+      "title": "worker-01 disk full: no space left on device /var/log",
+      "level": "fatal",
+      "count": 2,
+      "firstSeen": 1718427446000,
+      "lastSeen": 1718427475000,
+      "timeline": [
+        {
+          "bucket": "2024-06-15 04:57",
+          "count": 2
+        }
+      ],
+      "samples": [
+        "2024-06-15 10:27:55 [FATAL] worker-01 disk full: no space left on device /var/log",
+        "2024-06-15 10:27:26 [FATAL] worker-01 disk full: no space left on device /var/log"
+      ],
+      "isNew": false,
+      "sparkline": "█"
+    },
+    {
+      "id": "ae0d138a",
+      "fingerprint": "ae0d138a",
+      "title": "<*>-01 NullPointerException in CheckoutService for user <*>",
+      "level": "error",
+      "count": 2,
+      "firstSeen": 1718425800000,
+      "lastSeen": 1718426820000,
+      "timeline": [
+        {
+          "bucket": "2024-06-15 04:30",
+          "count": 1
+        },
+        {
+          "bucket": "2024-06-15 04:47",
+          "count": 1
+        }
+      ],
+      "samples": [
+        "2024-06-15 10:00:00 [ERROR] api-01 NullPointerException in CheckoutService for user erin",
+        "2024-06-15 10:17:00 [ERROR] web-01 NullPointerException in CheckoutService for user frank"
+      ],
+      "isNew": false,
+      "sparkline": "██"
+    },
+    {
+      "id": "0c533cb8",
+      "fingerprint": "0c533cb8",
+      "title": "worker-01 NullPointerException in CheckoutService for user dave",
+      "level": "error",
+      "count": 1,
+      "firstSeen": 1718425980000,
+      "lastSeen": 1718425980000,
+      "timeline": [
+        {
+          "bucket": "2024-06-15 04:33",
+          "count": 1
+        }
+      ],
+      "samples": [
+        "2024-06-15 10:03:00 [ERROR] worker-01 NullPointerException in CheckoutService for user dave"
+      ],
+      "isNew": false,
+      "sparkline": "█"
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "new_template",
+      "severity": "high",
+      "message": "New log pattern first seen late in the trace: \"<*>-01 disk full: no space left on device /var/log\"",
+      "at": 1718427424000,
+      "detail": "4 occurrences, all in the last 10% of the time range"
+    },
+    {
+      "type": "new_template",
+      "severity": "high",
+      "message": "New log pattern first seen late in the trace: \"<*>-02 disk full: no space left on device /var/log\"",
+      "at": 1718427421000,
+      "detail": "6 occurrences, all in the last 10% of the time range"
+    },
+    {
+      "type": "spike",
+      "severity": "high",
+      "message": "Error spike at 2024-06-15 04:45 — 42 errors/min (z-score 5.3)",
+      "at": 1718426700000,
+      "detail": "mean 4.3/min, stddev 7.1"
+    }
+  ],
+  "durationMs": 17.927700000000016
+}

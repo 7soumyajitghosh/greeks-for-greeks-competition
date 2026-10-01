@@ -71,8 +71,8 @@ interface Cluster {
   lastSeen: number | null;
   sample: string;
   sampleSpans: [number, number][];
-  /** character spans (in `sample`) that are parameters */
-  paramSpans: [number, number][];
+  /** word positions (index into tokens/spans) that are parameters */
+  paramPositions: Set<number>;
   params: string[][];
 }
 
@@ -113,11 +113,10 @@ export class DrainParser {
 
     // First tree layer is keyed by the length of the first token (as in Drain).
     const firstLen = tokens[0]!.length;
-    let node = this.root.get(firstLen);
-    if (!node) {
-      node = { children: new Map(), clusters: [] };
-      this.root.set(firstLen, node);
+    if (!this.root.has(firstLen)) {
+      this.root.set(firstLen, { children: new Map(), clusters: [] });
     }
+    let node: TreeNode = this.root.get(firstLen)!;
 
     // Descend up to `depth` levels, keyed by the token at each position.
     let i = 1;
@@ -129,7 +128,7 @@ export class DrainParser {
         child = { children: new Map(), clusters: [] };
         node.children.set(key, child);
       }
-      node = child;
+      node = child!;
     }
 
     // Find the most similar cluster at this leaf.
@@ -157,7 +156,7 @@ export class DrainParser {
       lastSeen: null,
       sample: event.message,
       sampleSpans: spans,
-      paramSpans: [],
+      paramPositions: new Set(),
       params: [],
     };
     node.clusters.push(cluster);
@@ -168,18 +167,19 @@ export class DrainParser {
   /** Update a cluster with a new matching event. */
   private merge(cluster: Cluster, tokens: string[], spans: [number, number][], event: LogEvent): void {
     // Positions where the new message differs become parameters.
-    const paramPositions = new Set<number>();
     for (let i = 0; i < cluster.tokens.length; i++) {
-      if (cluster.tokens[i] !== tokens[i]) paramPositions.add(i);
+      if (cluster.tokens[i] !== tokens[i]) cluster.paramPositions.add(i);
     }
     // New positions beyond the current template length are appended literally.
-    for (let i = cluster.tokens.length; i < tokens.length; i++) {
-      cluster.tokens.push(tokens[i]!);
-      cluster.sampleSpans.push(spans[i]!);
+    if (tokens.length > cluster.tokens.length) {
+      cluster.sample = event.message;
+      for (let i = cluster.tokens.length; i < tokens.length; i++) {
+        cluster.tokens.push(tokens[i]!);
+        cluster.sampleSpans.push(spans[i]!);
+      }
     }
-    for (const i of paramPositions) {
+    for (const i of cluster.paramPositions) {
       cluster.tokens[i] = '<*>';
-      if (spans[i]) cluster.paramSpans.push(spans[i]!);
     }
 
     cluster.count++;
@@ -189,7 +189,7 @@ export class DrainParser {
     }
     if (levelRank(event.level) > levelRank(cluster.level)) cluster.level = event.level;
 
-    const params = tokens.filter((_, i) => cluster.tokens[i] === '<*>' || paramPositions.has(i));
+    const params = tokens.filter((_, i) => cluster.paramPositions.has(i));
     if (cluster.params.length < this.maxParams && params.length > 0) {
       cluster.params.push(params);
     }
@@ -205,7 +205,7 @@ export class DrainParser {
       lastSeen: event.timestamp,
       sample: event.message,
       sampleSpans: spans,
-      paramSpans: [],
+      paramPositions: new Set(),
       params: [],
     };
     // Raw clusters always live at the root under key 0.
@@ -231,11 +231,15 @@ export class DrainParser {
 }
 
 function toTemplate(c: Cluster): LogTemplate {
-  // Render the template by replacing parameter spans in the sample with `<*>`.
+  // Render the template by replacing parameter word positions in the sample
+  // with `<*>`, keeping all delimiters/glue intact.
   let template = c.sample;
-  const sorted = [...c.paramSpans].sort((a, b) => b[0] - a[0]);
-  for (const [start, end] of sorted) {
-    template = template.slice(0, start) + '<*>' + template.slice(end);
+  const sorted = [...c.paramPositions].sort((a, b) => b - a);
+  for (const pos of sorted) {
+    const span = c.sampleSpans[pos];
+    if (span) {
+      template = template.slice(0, span[0]) + '<*>' + template.slice(span[1]);
+    }
   }
   return {
     id: c.id,
