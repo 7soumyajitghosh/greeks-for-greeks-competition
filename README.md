@@ -1,4 +1,4 @@
-# DevFix AI — Find bugs. Improve design. Build faster.
+# Fixa AI — Find bugs. Improve design. Build faster.
 
 > A developer-support platform that explains **what's wrong, why it's wrong, and how to fix it** — for code, UI, APIs, and logs.
 >
@@ -28,7 +28,7 @@ Returns a structured result with `issueSummary`, `severity`, `likelyCause`, `sug
 ## Table of contents
 
 - [🌐 Live Demo](#-live-demo)
-- [What is DevFix AI?](#-what-is-devfix-ai)
+- [What is Fixa AI?](#-what-is-fixa-ai)
 - [What works today](#-what-works-today)
 - [Architecture](#-architecture)
 - [Repository structure](#-repository-structure)
@@ -53,7 +53,7 @@ Returns a structured result with `issueSummary`, `severity`, `likelyCause`, `sug
 ```bash
 # Health check (live)
 curl https://sources-rep-carl-members.trycloudflare.com/api/health
-# {"ok":true,"service":"devfix-ai-backend"}
+# {"ok":true,"service":"fixa-ai-backend"}
 
 # Analyze (live)
 curl -X POST https://sources-rep-carl-members.trycloudflare.com/api/analyze \
@@ -65,13 +65,13 @@ curl -X POST https://sources-rep-carl-members.trycloudflare.com/api/analyze \
 
 ---
 
-## 🧠 What is DevFix AI?
+## 🧠 What is Fixa AI?
 
 Paste code + an error (or a UI snippet / screenshot) and get back a **structured, explainable result** — not just fixed code, but the reasoning a senior dev would give you.
 
 ```
 Your Code ──►                   ──► Fixed Code + Why
-Your UI   ──►   DevFix AI   ──► UI Score + Actionable Fixes
+Your UI   ──►   Fixa AI   ──► UI Score + Actionable Fixes
 Your Logs ──►   (Brain +        ──► Templates, Issues, Anomalies
 Your API  ──►    LogScope)      ──► Optimized Backend Guidance
 ```
@@ -218,7 +218,7 @@ Open `http://localhost:4000` (placeholder page) or hit the API:
 
 ```bash
 curl http://localhost:4000/api/health
-# {"ok":true,"service":"devfix-ai-backend"}
+# {"ok":true,"service":"fixa-ai-backend"}
 ```
 
 ### 2. LogScope CLI
@@ -307,7 +307,7 @@ Static rules today (10 checks): `react-onclick-invoked`, `null-guard`, `missing-
 PORT=4000
 AI_API_KEY=
 AI_API_URL=
-DATABASE_URL="postgresql://user:password@localhost:5432/devfix"
+DATABASE_URL="postgresql://user:password@localhost:5432/fixa"
 UPLOAD_DIR="./uploads"
 ```
 
@@ -419,7 +419,7 @@ MIT License — see [LICENSE](./LICENSE).
 
 Thanks to [GeeksforGeeks](https://www.geeksforgeeks.org/) for the competition, and to [Next.js](https://nextjs.org/), [Prisma](https://www.prisma.io/), [shadcn/ui](https://ui.shadcn.com/), and [Monaco Editor](https://microsoft.github.io/monaco-editor/) for the stack we build on.
 
-<p align="center"><sub>Built with care by the DevFix AI team — ⭐ star this repo if it's useful!</sub></p>
+<p align="center"><sub>Built with care by the Fixa AI team — ⭐ star this repo if it's useful!</sub></p>
 
 ---
 

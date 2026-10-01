@@ -1,6 +1,6 @@
 // Prompt templates per analysis type. Used when AI_API_KEY is set.
 // Keep temperature low for fixes; response must be strict JSON.
-const SYSTEM = `You are DevFix AI, a senior full-stack mentor. Always return STRICT JSON matching the requested schema. Never invent file paths. Include a beginner-friendly "why". End with a reminder to review and test before production use.`;
+const SYSTEM = `You are Fixa AI, a senior full-stack mentor. Always return STRICT JSON matching the requested schema. Never invent file paths. Include a beginner-friendly "why". End with a reminder to review and test before production use.`;
 
 const TEMPLATES = {
   fix_error: (ctx) => `${SYSTEM}\nTask: fix_error. Language=${ctx.language} Framework=${ctx.framework}\nStatic findings: ${JSON.stringify(ctx.findings)}\nCode:\n${ctx.code}\nError:\n${ctx.error}\nReturn JSON: {issueSummary, severity(Low|Medium|High|Critical), category, likelyCause, suggestedFix, improvedCode, explanation, nextActions[]}`,

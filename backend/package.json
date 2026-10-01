@@ -1,7 +1,7 @@
 {
-  "name": "devfix-ai-backend",
+  "name": "fixa-ai-backend",
   "version": "0.1.0",
-  "description": "DevFix AI backend — code debugging, UI review, API help",
+  "description": "Fixa AI backend — code debugging, UI review, API help",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",

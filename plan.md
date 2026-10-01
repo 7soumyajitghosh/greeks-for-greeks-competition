@@ -1,7 +1,7 @@
-# DevFix AI — Build Plan
+# Fixa AI — Build Plan
 
 > Tagline: "Find bugs, improve design, and build faster."
-> Pitch: DevFix AI is a web-based developer-support platform that helps programmers find bugs, improve frontend design, review backend logic, and understand code fixes. Users can paste code, error messages, or UI screenshots and receive structured, explainable suggestions.
+> Pitch: Fixa AI is a web-based developer-support platform that helps programmers find bugs, improve frontend design, review backend logic, and understand code fixes. Users can paste code, error messages, or UI screenshots and receive structured, explainable suggestions.
 
 ## 1. Goal & Scope
 
@@ -235,7 +235,7 @@ prisma/schema.prisma
 
 ## 12. Build Order (next actions)
 
-1. `npx create-next-app@latest devfix-ai --ts --tailwind --app --src-dir=false` + shadcn init + Monaco + Zod + Prisma init
+1. `npx create-next-app@latest fixa-ai --ts --tailwind --app --src-dir=false` + shadcn init + Monaco + Zod + Prisma init
 2. Build 4 screens with mock data (Phase 1) — land, dashboard, analyze/new, analyze/[id]
 3. Implement `/api/analyze` with one working path (JS/React + error) + rules + copy button (Phase 2 MVP demo)
 4. Add Auth + Supabase Postgres + Save/history/export (Phase 3)

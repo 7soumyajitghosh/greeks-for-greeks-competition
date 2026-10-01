@@ -16,7 +16,7 @@ app.use(express.json({ limit: "1mb" }));
 const limiter = rateLimit({ windowMs: 60 * 60 * 1000, max: 100 });
 app.use("/api/", limiter);
 
-app.get("/api/health", (_req, res) => res.json({ ok: true, service: "devfix-ai-backend" }));
+app.get("/api/health", (_req, res) => res.json({ ok: true, service: "fixa-ai-backend" }));
 app.use("/api/analyze", analyze);
 app.use("/api/followup", followup);
 app.use("/api/upload", upload);
@@ -30,6 +30,6 @@ app.get("*", (req, res, next) => {
 
 const PORT = process.env.PORT || 4000;
 if (require.main === module) {
-  app.listen(PORT, () => console.log(`DevFix AI backend on :${PORT}`));
+  app.listen(PORT, () => console.log(`Fixa AI backend on :${PORT}`));
 }
 module.exports = app;

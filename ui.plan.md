@@ -1,4 +1,4 @@
-# DevFix AI — Project Plan
+# Fixa AI — Project Plan
 
 **Tagline:** Find bugs, improve design, and build faster.
 **Goal:** A fully animated, web-based developer assistant. Paste code, an error, or a screenshot, and get a structured fix, a UI review, and a plain-language explanation.
@@ -142,7 +142,7 @@ SavedFix (id, analysisId, originalCode, suggestedCode, userNotes, createdAt)
 
 ## 10. Pitch
 
-> DevFix AI is a web-based developer-support platform that helps programmers find bugs, improve frontend design, review backend logic, and understand code fixes. Users paste code, errors, or UI screenshots and receive structured, explainable suggestions, teaching developers why an issue occurred and how to avoid it next time.
+> Fixa AI is a web-based developer-support platform that helps programmers find bugs, improve frontend design, review backend logic, and understand code fixes. Users paste code, errors, or UI screenshots and receive structured, explainable suggestions, teaching developers why an issue occurred and how to avoid it next time.
 
 ## 11. Immediate next steps
 

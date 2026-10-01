@@ -1,4 +1,4 @@
-# Architecture & Technical Understanding — DevFix AI Monorepo
+# Architecture & Technical Understanding — Fixa AI Monorepo
 
 > Single source of truth for how this repo is organized, how each subsystem works, and how data flows end-to-end. Verified against code on disk (Oct 2026).
 
@@ -6,7 +6,7 @@
 
 ```
 plan.md / ui.plan.md          # Product spec (v1 scope, phased roadmap, UI direction)
-backend/                      # DevFix AI backend — Express + Zod, rule-based analysis (Phase 2 done)
+backend/                      # Fixa AI backend — Express + Zod, rule-based analysis (Phase 2 done)
   src/index.js                # App entry, rate-limit, static serving
   src/routes/                 # analyze.js, followup.js, upload.js, history.js
   src/lib/                    # analyzer.js, rules.js, prompts.js, secrets.js, validator.js, store.js
@@ -53,7 +53,7 @@ logscope/                     # Standalone log-analysis CLI (TypeScript, zero ru
 
 Planned production (per `plan.md` §2): Next.js 14 App Router + Tailwind/shadcn + Monaco + Prisma/Supabase Postgres + Auth.js + Upstash Redis + Vercel. Current backend is the **fallback Express path** (`plan.md` §2 last line) used to unblock Phase 2 without Next.js.
 
-## 3. Backend — DevFix AI API (`backend/`)
+## 3. Backend — Fixa AI API (`backend/`)
 
 Stack: `express@4 + zod@3 + multer + express-rate-limit + dotenv`. CJS (`require`). Entry `backend/src/index.js:1-35`.
 

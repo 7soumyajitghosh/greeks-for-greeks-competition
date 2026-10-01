@@ -1,4 +1,4 @@
-# DevFix AI Backend
+# Fixa AI Backend
 
 Express backend (Phase 2). Rule-based analysis works without AI key; set `AI_API_KEY` + `AI_API_URL` to enable AI augmentation.
 
