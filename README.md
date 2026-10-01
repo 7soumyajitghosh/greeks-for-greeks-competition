@@ -9,7 +9,7 @@
 [![Backend tests](https://img.shields.io/badge/backend-5%20tests%20passing-brightgreen)](#-verify-it-works)
 [![LogScope](https://img.shields.io/badge/logscope-zero--deps-orange)](#-logscope--log-analysis-cli)
 
-🌐 **Live Demo: [https://sources-rep-carl-members.trycloudflare.com/](https://sources-rep-carl-members.trycloudflare.com/)**
+🌐 **Live Demo:** run locally at [http://localhost:4000/](http://localhost:4000/) — or expose it publicly (see [Sharing the app](#-sharing-the-app-public-url)).
 
 **Try it in 60 seconds:**
 
@@ -28,6 +28,7 @@ Returns a structured result with `issueSummary`, `severity`, `likelyCause`, `sug
 ## Table of contents
 
 - [🌐 Live Demo](#-live-demo)
+- [📡 Sharing the app](#-sharing-the-app-public-url)
 - [What is Fixa AI?](#-what-is-fixa-ai)
 - [What works today](#-what-works-today)
 - [Architecture](#-architecture)
@@ -48,20 +49,39 @@ Returns a structured result with `issueSummary`, `severity`, `likelyCause`, `sug
 
 ## 🌐 Live Demo
 
-**App:** [https://sources-rep-carl-members.trycloudflare.com/](https://sources-rep-carl-members.trycloudflare.com/)
+**App:** run `node src/index.js` in `backend/` and open [http://localhost:4000/](http://localhost:4000/). To share a public link, see [Sharing the app](#-sharing-the-app-public-url).
 
 ```bash
 # Health check (live)
-curl https://sources-rep-carl-members.trycloudflare.com/api/health
+curl http://localhost:4000/api/health
 # {"ok":true,"service":"fixa-ai-backend"}
 
 # Analyze (live)
-curl -X POST https://sources-rep-carl-members.trycloudflare.com/api/analyze \
+curl -X POST http://localhost:4000/api/analyze \
   -H "Content-Type: application/json" \
   -d '{"type":"fix_error","language":"javascript","framework":"react","code":"<button onClick={handleLogin()}>Login</button>","error":"Too many re-renders"}'
 ```
 
 > Local dev still runs on `http://localhost:4000` (see [Quick start](#-quick-start)).
+
+## 📡 Sharing the app (public URL)
+
+Pick one option — the app needs no code changes, just expose port 4000:
+
+**Option A — self-healing tunnel script (quick demo):**
+```powershell
+cd backend
+npm run share   # prints PUBLIC_URL=https://<name>.loca.lt, auto-reconnects
+```
+Open the printed URL in any browser. If it shows 502/503, the network is blocking tunnel relays — use Option B or C.
+
+**Option B — ngrok (stable link):**
+```powershell
+ngrok http 4000   # paste your free authtoken once: ngrok config add-authtoken <token>
+```
+
+**Option C — permanent hosting (recommended for judging):**
+Deploy `backend/` to Render/Railway/Fly (`node src/index.js`, port 4000) and put the URL at the top of this README.
 
 ---
 
@@ -103,7 +123,7 @@ logscope analyze ./logs/production.log
 | `backend/` Express API | **Working (Phase 2)** | Rule-based analysis works with no API key; AI augmentation is opt-in |
 | `logscope/` CLI | **Working standalone** | Zero runtime deps; Drain parsing + Sentry-style grouping + anomaly detection |
 | `brain/` TypeScript library | **Library only, not wired to backend** | `UnifiedBrain` / `CodingBrain` / `AnimationBrain` — import and use directly |
-| Next.js frontend | **Not built** | `backend/public/index.html` is a placeholder only |
+| `backend/public/index.html` | **Working single-file app** | Landing, dashboard, new-analysis form, structured results, follow-up chat, history, export |
 | Auth + Postgres persistence | **Not built** | Schema designed in `backend/prisma/schema.prisma`; runtime store is in-memory |
 
 > Honest scope: there are **three independent runtimes** (`backend` JS/CJS, `brain` TS, `logscope` TS/ESM) with no cross-imports today. See [ARCHITECTURE.md](./ARCHITECTURE.md) — the verified single source of truth.
@@ -115,7 +135,7 @@ logscope analyze ./logs/production.log
 ```
               ┌─────────────────────────────────┐
               │  Client (Next.js planned)       │
-              │  Monaco + screenshot upload     │  ← NOT BUILT (placeholder only)
+              │  Monaco + screenshot upload     │  ← NOT BUILT (working app)
               └────────┬───────────────┬────────┘
                        │ code+error    │ screenshot
                        ▼               ▼
@@ -173,7 +193,7 @@ greeks-for-greeks-competition/
 │   ├── src/routes/          # analyze.js, followup.js, upload.js, history.js
 │   ├── src/lib/             # analyzer.js, rules.js, prompts.js, secrets.js, validator.js, store.js
 │   ├── prisma/schema.prisma # Phase 3 DB design (not yet wired)
-│   ├── public/index.html    # Placeholder frontend (no Next.js yet)
+│   ├── public/index.html    # Working single-file frontend (landing, dashboard, analyze, results, history)
 │   └── test/*.test.js       # node:test suites (5 passing)
 │
 ├── brain/                   # 📚 TS intelligence library (not called by backend)
@@ -254,8 +274,6 @@ brain.analyzeAnimation("<div>...</div>");
 ---
 
 ## 🔌 API reference
-
-Live base URL: `https://sources-rep-carl-members.trycloudflare.com` — local dev: `http://localhost:4000`
 
 | Method & path | Body / input | Returns |
 |---------------|--------------|---------|
@@ -430,3 +448,4 @@ Thanks to [GeeksforGeeks](https://www.geeksforgeeks.org/) for the competition, a
 - [`ui.plan.md`](./ui.plan.md) — animation & UI direction
 - [`backend/README.md`](./backend/README.md) — backend quick ref
 - [`brain/README.md`](./brain/README.md) + [`brain/ARCHITECTURE.md`](./brain/ARCHITECTURE.md) — Brain internals
+

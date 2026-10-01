@@ -1,0 +1,7 @@
+node_modules/
+tunnel-url.txt
+backend/uploads/*
+!backend/uploads/.gitkeep
+.env
+dist/
+*.log
