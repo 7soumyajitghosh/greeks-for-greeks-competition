@@ -1,0 +1,594 @@
+2024-06-15 10:00:36 [INFO] api-01 request: user=frank path=/health status=200 230ms
+2024-06-15 10:00:16 [INFO] api-02 request: user=frank path=/api/orders status=200 372ms
+2024-06-15 10:00:44 [INFO] web-02 request: user=bob path=/api/search status=201 264ms
+2024-06-15 10:00:00 [INFO] api-01 request: user=frank path=/api/login status=201 32ms
+2024-06-15 10:00:16 [INFO] web-01 request: user=bob path=/health status=200 30ms
+2024-06-15 10:00:10 [INFO] worker-01 request: user=carol path=/health status=200 199ms
+2024-06-15 10:00:02 [INFO] web-01 request: user=dave path=/api/search status=200 278ms
+2024-06-15 10:00:12 [INFO] web-02 request: user=erin path=/api/checkout status=200 101ms
+2024-06-15 10:00:17 [INFO] web-02 request: user=alice path=/api/search status=201 297ms
+2024-06-15 10:00:55 [INFO] web-01 request: user=frank path=/api/orders status=404 74ms
+2024-06-15 10:00:06 [INFO] web-01 request: user=carol path=/api/orders status=201 379ms
+2024-06-15 10:00:04 [INFO] api-02 request: user=frank path=/api/users status=201 91ms
+2024-06-15 10:00:31 [INFO] worker-01 request: user=alice path=/api/checkout status=200 386ms
+2024-06-15 10:00:26 [INFO] api-01 request: user=carol path=/api/search status=200 311ms
+2024-06-15 10:00:17 [INFO] api-01 request: user=frank path=/health status=404 376ms
+2024-06-15 10:00:32 [ERROR] web-02 connection refused to db.internal port 443
+2024-06-15 10:00:41 [ERROR] web-02 connection refused to db.internal port 27017
+2024-06-15 10:00:00 [ERROR] api-01 NullPointerException in CheckoutService for user erin
+2024-06-15 10:00:00 [WARN] worker-01 slow request: path=/api/users took 2218ms
+2024-06-15 10:01:41 [INFO] web-02 request: user=carol path=/api/login status=201 154ms
+2024-06-15 10:01:12 [INFO] api-02 request: user=frank path=/api/users status=301 177ms
+2024-06-15 10:01:07 [INFO] worker-01 request: user=carol path=/api/login status=301 274ms
+2024-06-15 10:01:52 [INFO] worker-01 request: user=bob path=/api/search status=200 93ms
+2024-06-15 10:01:02 [INFO] api-02 request: user=erin path=/api/users status=200 154ms
+2024-06-15 10:01:01 [INFO] web-02 request: user=frank path=/api/search status=404 85ms
+2024-06-15 10:01:10 [INFO] api-01 request: user=bob path=/api/orders status=200 187ms
+2024-06-15 10:01:41 [INFO] web-02 request: user=carol path=/api/checkout status=200 218ms
+2024-06-15 10:01:36 [INFO] api-01 request: user=dave path=/api/users status=200 139ms
+2024-06-15 10:01:19 [INFO] api-02 request: user=bob path=/api/users status=201 145ms
+2024-06-15 10:01:07 [INFO] web-02 request: user=alice path=/api/search status=200 212ms
+2024-06-15 10:01:22 [INFO] api-02 request: user=frank path=/health status=200 81ms
+2024-06-15 10:01:52 [INFO] api-01 request: user=frank path=/api/checkout status=200 78ms
+2024-06-15 10:01:37 [INFO] worker-01 request: user=bob path=/api/orders status=200 413ms
+2024-06-15 10:01:29 [INFO] worker-01 request: user=frank path=/health status=200 47ms
+{"time":"2024-06-15T10:01:00.000Z","level":"info","logger":"audit","msg":"audit event","host":"api-01","user":"erin","country":"BR"}
+2024-06-15 10:01:59 [ERROR] worker-01 connection refused to db.internal port 6379
+2024-06-15 10:01:50 [ERROR] worker-01 connection refused to db.internal port 6379
+2024-06-15 10:01:00 [ERROR] api-01 timeout waiting for /api/checkout after 7042ms
+2024-06-15 10:02:37 [INFO] web-02 request: user=frank path=/api/login status=200 27ms
+2024-06-15 10:02:05 [INFO] api-02 request: user=erin path=/api/checkout status=404 206ms
+2024-06-15 10:02:42 [INFO] web-01 request: user=bob path=/api/login status=200 136ms
+2024-06-15 10:02:26 [INFO] api-01 request: user=erin path=/health status=301 98ms
+2024-06-15 10:02:39 [INFO] api-01 request: user=carol path=/api/orders status=200 190ms
+2024-06-15 10:02:19 [INFO] web-02 request: user=alice path=/api/search status=200 232ms
+2024-06-15 10:02:32 [INFO] api-02 request: user=carol path=/api/login status=200 79ms
+2024-06-15 10:02:56 [INFO] web-01 request: user=frank path=/api/orders status=200 59ms
+2024-06-15 10:02:49 [INFO] web-01 request: user=carol path=/api/users status=201 245ms
+2024-06-15 10:02:05 [INFO] worker-01 request: user=erin path=/api/search status=301 239ms
+2024-06-15 10:02:48 [INFO] api-01 request: user=bob path=/api/login status=200 43ms
+2024-06-15 10:02:15 [INFO] api-02 request: user=erin path=/api/search status=404 28ms
+2024-06-15 10:02:23 [INFO] web-02 request: user=bob path=/health status=200 101ms
+2024-06-15 10:02:56 [INFO] worker-01 request: user=bob path=/api/search status=404 394ms
+2024-06-15 10:02:41 [INFO] api-01 request: user=erin path=/api/users status=200 320ms
+2024-06-15 10:02:41 [ERROR] api-01 connection refused to db.internal port 6379
+2024-06-15 10:02:58 [ERROR] worker-01 connection refused to db.internal port 27017
+2024-06-15 10:02:00 [ERROR] api-02 timeout waiting for /health after 7594ms
+2024-06-15 10:03:19 [INFO] worker-01 request: user=carol path=/api/orders status=200 354ms
+2024-06-15 10:03:37 [INFO] worker-01 request: user=erin path=/api/login status=200 404ms
+2024-06-15 10:03:29 [INFO] web-02 request: user=dave path=/health status=301 305ms
+2024-06-15 10:03:11 [INFO] worker-01 request: user=frank path=/api/search status=200 49ms
+2024-06-15 10:03:29 [INFO] worker-01 request: user=erin path=/api/orders status=200 266ms
+2024-06-15 10:03:43 [INFO] api-01 request: user=alice path=/api/users status=200 68ms
+2024-06-15 10:03:22 [INFO] worker-01 request: user=frank path=/health status=200 33ms
+2024-06-15 10:03:16 [INFO] api-02 request: user=bob path=/api/checkout status=201 383ms
+2024-06-15 10:03:53 [INFO] web-02 request: user=alice path=/api/search status=200 212ms
+2024-06-15 10:03:16 [INFO] web-02 request: user=erin path=/api/search status=200 256ms
+2024-06-15 10:03:06 [INFO] api-02 request: user=erin path=/api/checkout status=200 43ms
+2024-06-15 10:03:01 [INFO] web-02 request: user=bob path=/api/users status=404 252ms
+2024-06-15 10:03:50 [INFO] web-02 request: user=dave path=/api/login status=301 339ms
+2024-06-15 10:03:22 [INFO] web-02 request: user=erin path=/api/search status=200 52ms
+2024-06-15 10:03:46 [INFO] api-01 request: user=frank path=/health status=200 400ms
+{"time":"2024-06-15T10:03:00.000Z","level":"info","logger":"audit","msg":"audit event","host":"web-01","user":"dave","country":"BR"}
+2024-06-15 10:03:12 [ERROR] api-02 connection refused to db.internal port 443
+2024-06-15 10:03:08 [ERROR] api-02 connection refused to db.internal port 6379
+2024-06-15 10:03:00 [ERROR] worker-01 NullPointerException in CheckoutService for user dave
+2024-06-15 10:04:02 [INFO] worker-01 request: user=dave path=/api/users status=200 150ms
+2024-06-15 10:04:42 [INFO] api-02 request: user=bob path=/api/checkout status=200 93ms
+2024-06-15 10:04:38 [INFO] api-01 request: user=bob path=/api/checkout status=200 74ms
+2024-06-15 10:04:59 [INFO] web-02 request: user=carol path=/api/search status=201 213ms
+2024-06-15 10:04:40 [INFO] web-01 request: user=frank path=/health status=200 101ms
+2024-06-15 10:04:31 [INFO] api-02 request: user=carol path=/api/orders status=200 219ms
+2024-06-15 10:04:02 [INFO] worker-01 request: user=carol path=/api/orders status=200 221ms
+2024-06-15 10:04:02 [INFO] api-02 request: user=alice path=/api/checkout status=301 283ms
+2024-06-15 10:04:48 [INFO] web-01 request: user=dave path=/api/search status=200 224ms
+2024-06-15 10:04:28 [INFO] api-01 request: user=dave path=/api/login status=201 21ms
+2024-06-15 10:04:41 [INFO] web-01 request: user=carol path=/health status=404 131ms
+2024-06-15 10:04:37 [INFO] worker-01 request: user=carol path=/api/login status=200 217ms
+2024-06-15 10:04:26 [INFO] api-01 request: user=erin path=/api/login status=301 258ms
+2024-06-15 10:04:56 [INFO] worker-01 request: user=carol path=/api/login status=404 44ms
+2024-06-15 10:04:30 [INFO] api-01 request: user=erin path=/api/search status=201 360ms
+2024-06-15 10:04:59 [ERROR] worker-01 connection refused to db.internal port 27017
+2024-06-15 10:04:48 [ERROR] worker-01 connection refused to db.internal port 27017
+2024-06-15 10:04:00 [ERROR] web-01 timeout waiting for /api/checkout after 5104ms
+2024-06-15 10:05:40 [INFO] api-02 request: user=bob path=/api/checkout status=200 389ms
+2024-06-15 10:05:39 [INFO] web-02 request: user=alice path=/api/orders status=301 40ms
+2024-06-15 10:05:08 [INFO] web-02 request: user=dave path=/api/orders status=201 409ms
+2024-06-15 10:05:24 [INFO] api-02 request: user=erin path=/api/login status=201 370ms
+2024-06-15 10:05:15 [INFO] api-01 request: user=frank path=/api/orders status=200 356ms
+2024-06-15 10:05:37 [INFO] web-02 request: user=carol path=/api/search status=404 89ms
+2024-06-15 10:05:35 [INFO] web-01 request: user=dave path=/health status=200 258ms
+2024-06-15 10:05:50 [INFO] web-02 request: user=dave path=/api/users status=404 92ms
+2024-06-15 10:05:40 [INFO] api-02 request: user=dave path=/api/search status=201 378ms
+2024-06-15 10:05:46 [INFO] web-01 request: user=alice path=/api/login status=404 20ms
+2024-06-15 10:05:02 [INFO] api-01 request: user=alice path=/health status=201 20ms
+2024-06-15 10:05:24 [INFO] worker-01 request: user=carol path=/api/users status=301 281ms
+2024-06-15 10:05:02 [INFO] api-02 request: user=dave path=/api/checkout status=201 186ms
+2024-06-15 10:05:35 [INFO] api-01 request: user=dave path=/api/users status=200 302ms
+2024-06-15 10:05:43 [INFO] web-02 request: user=frank path=/api/checkout status=200 258ms
+{"time":"2024-06-15T10:05:00.000Z","level":"info","logger":"audit","msg":"audit event","host":"api-02","user":"frank","country":"JP"}
+2024-06-15 10:05:41 [ERROR] web-02 connection refused to db.internal port 27017
+2024-06-15 10:05:30 [ERROR] worker-01 connection refused to db.internal port 443
+2024-06-15 10:05:00 [ERROR] web-02 timeout waiting for /api/checkout after 6517ms
+2024-06-15 10:05:00 [WARN] api-02 slow request: path=/api/search took 2777ms
+2024-06-15 10:06:15 [INFO] worker-01 request: user=bob path=/api/checkout status=200 224ms
+2024-06-15 10:06:23 [INFO] web-02 request: user=bob path=/api/checkout status=201 146ms
+2024-06-15 10:06:30 [INFO] web-02 request: user=carol path=/api/users status=200 379ms
+2024-06-15 10:06:39 [INFO] api-01 request: user=frank path=/api/search status=301 197ms
+2024-06-15 10:06:37 [INFO] api-01 request: user=dave path=/api/search status=201 183ms
+2024-06-15 10:06:10 [INFO] web-01 request: user=erin path=/api/orders status=200 27ms
+2024-06-15 10:06:07 [INFO] api-02 request: user=bob path=/api/login status=200 299ms
+2024-06-15 10:06:08 [INFO] api-02 request: user=bob path=/api/users status=201 156ms
+2024-06-15 10:06:20 [INFO] api-02 request: user=carol path=/health status=200 99ms
+2024-06-15 10:06:20 [INFO] worker-01 request: user=frank path=/api/checkout status=200 89ms
+2024-06-15 10:06:39 [INFO] api-02 request: user=erin path=/api/checkout status=200 170ms
+2024-06-15 10:06:09 [INFO] worker-01 request: user=dave path=/api/users status=200 362ms
+2024-06-15 10:06:05 [INFO] api-01 request: user=dave path=/api/search status=404 230ms
+2024-06-15 10:06:40 [INFO] api-01 request: user=frank path=/api/checkout status=200 110ms
+2024-06-15 10:06:55 [INFO] web-02 request: user=erin path=/api/search status=200 149ms
+{"time":"2024-06-15T10:06:00.000Z","level":"info","logger":"audit","msg":"audit event","host":"web-02","user":"dave","country":"JP"}
+2024-06-15 10:06:52 [ERROR] web-02 connection refused to db.internal port 6379
+2024-06-15 10:06:29 [ERROR] api-01 connection refused to db.internal port 6379
+2024-06-15 10:07:13 [INFO] api-01 request: user=alice path=/api/login status=200 68ms
+2024-06-15 10:07:20 [INFO] api-02 request: user=dave path=/api/orders status=200 418ms
+2024-06-15 10:07:43 [INFO] api-01 request: user=carol path=/health status=200 253ms
+2024-06-15 10:07:15 [INFO] web-01 request: user=frank path=/api/orders status=200 399ms
+2024-06-15 10:07:02 [INFO] api-02 request: user=dave path=/api/login status=201 370ms
+2024-06-15 10:07:11 [INFO] worker-01 request: user=bob path=/api/checkout status=200 186ms
+2024-06-15 10:07:01 [INFO] web-02 request: user=alice path=/api/orders status=200 180ms
+2024-06-15 10:07:00 [INFO] worker-01 request: user=erin path=/api/users status=200 95ms
+2024-06-15 10:07:41 [INFO] api-02 request: user=frank path=/api/checkout status=404 118ms
+2024-06-15 10:07:42 [INFO] api-01 request: user=erin path=/api/users status=200 356ms
+2024-06-15 10:07:54 [INFO] worker-01 request: user=bob path=/api/login status=200 401ms
+2024-06-15 10:07:40 [INFO] api-02 request: user=alice path=/api/search status=201 337ms
+2024-06-15 10:07:00 [INFO] worker-01 request: user=bob path=/api/search status=200 51ms
+2024-06-15 10:07:16 [INFO] worker-01 request: user=frank path=/api/search status=200 33ms
+2024-06-15 10:07:48 [INFO] web-01 request: user=frank path=/api/orders status=404 399ms
+2024-06-15 10:07:08 [ERROR] web-02 connection refused to db.internal port 5432
+2024-06-15 10:07:04 [ERROR] api-02 connection refused to db.internal port 6379
+2024-06-15 10:08:03 [INFO] worker-01 request: user=erin path=/api/search status=200 343ms
+2024-06-15 10:08:13 [INFO] api-01 request: user=alice path=/api/checkout status=200 112ms
+2024-06-15 10:08:36 [INFO] api-02 request: user=dave path=/api/orders status=200 160ms
+2024-06-15 10:08:25 [INFO] api-02 request: user=alice path=/api/search status=201 279ms
+2024-06-15 10:08:52 [INFO] worker-01 request: user=carol path=/health status=200 203ms
+2024-06-15 10:08:39 [INFO] api-01 request: user=bob path=/api/checkout status=404 193ms
+2024-06-15 10:08:55 [INFO] worker-01 request: user=alice path=/api/orders status=404 128ms
+2024-06-15 10:08:29 [INFO] api-02 request: user=carol path=/health status=200 402ms
+2024-06-15 10:08:03 [INFO] worker-01 request: user=erin path=/api/orders status=200 127ms
+2024-06-15 10:08:22 [INFO] web-02 request: user=bob path=/api/login status=201 82ms
+2024-06-15 10:08:15 [INFO] web-01 request: user=erin path=/api/login status=301 239ms
+2024-06-15 10:08:27 [INFO] web-02 request: user=dave path=/api/search status=200 332ms
+2024-06-15 10:08:52 [INFO] api-02 request: user=dave path=/api/orders status=200 259ms
+2024-06-15 10:08:58 [INFO] web-02 request: user=carol path=/api/orders status=200 291ms
+2024-06-15 10:08:21 [INFO] web-01 request: user=dave path=/health status=200 415ms
+2024-06-15 10:08:54 [ERROR] api-01 connection refused to db.internal port 6379
+2024-06-15 10:08:23 [ERROR] worker-01 connection refused to db.internal port 5432
+2024-06-15 10:08:00 [ERROR] api-02 timeout waiting for /api/login after 5389ms
+2024-06-15 10:08:00 [WARN] web-02 slow request: path=/api/users took 1566ms
+2024-06-15 10:09:58 [INFO] api-01 request: user=erin path=/api/checkout status=301 126ms
+2024-06-15 10:09:49 [INFO] web-02 request: user=bob path=/api/login status=301 320ms
+2024-06-15 10:09:53 [INFO] api-01 request: user=bob path=/api/search status=201 129ms
+2024-06-15 10:09:53 [INFO] api-02 request: user=dave path=/api/search status=200 385ms
+2024-06-15 10:09:24 [INFO] worker-01 request: user=erin path=/api/login status=404 307ms
+2024-06-15 10:09:50 [INFO] web-02 request: user=alice path=/api/checkout status=200 246ms
+2024-06-15 10:09:51 [INFO] api-01 request: user=carol path=/api/search status=200 135ms
+2024-06-15 10:09:57 [INFO] worker-01 request: user=dave path=/api/search status=200 54ms
+2024-06-15 10:09:52 [INFO] web-02 request: user=bob path=/api/checkout status=201 118ms
+2024-06-15 10:09:18 [INFO] web-02 request: user=bob path=/api/checkout status=404 277ms
+2024-06-15 10:09:23 [INFO] api-02 request: user=bob path=/api/search status=200 257ms
+2024-06-15 10:09:21 [INFO] api-01 request: user=carol path=/api/orders status=201 106ms
+2024-06-15 10:09:41 [INFO] worker-01 request: user=dave path=/api/login status=200 89ms
+2024-06-15 10:09:52 [INFO] web-01 request: user=dave path=/health status=200 31ms
+2024-06-15 10:09:29 [INFO] web-01 request: user=erin path=/api/orders status=200 267ms
+2024-06-15 10:09:31 [ERROR] worker-01 connection refused to db.internal port 27017
+2024-06-15 10:09:10 [ERROR] web-01 connection refused to db.internal port 27017
+2024-06-15 10:09:00 [WARN] web-02 slow request: path=/api/users took 2413ms
+2024-06-15 10:10:27 [INFO] web-01 request: user=bob path=/api/search status=301 313ms
+2024-06-15 10:10:57 [INFO] api-01 request: user=frank path=/api/checkout status=201 361ms
+2024-06-15 10:10:21 [INFO] web-01 request: user=alice path=/api/search status=201 131ms
+2024-06-15 10:10:58 [INFO] worker-01 request: user=erin path=/api/checkout status=200 338ms
+2024-06-15 10:10:04 [INFO] web-02 request: user=dave path=/api/search status=404 324ms
+2024-06-15 10:10:44 [INFO] worker-01 request: user=frank path=/health status=404 260ms
+2024-06-15 10:10:54 [INFO] web-02 request: user=dave path=/api/login status=200 100ms
+2024-06-15 10:10:44 [INFO] web-02 request: user=erin path=/api/users status=301 139ms
+2024-06-15 10:10:01 [INFO] web-01 request: user=bob path=/api/checkout status=404 157ms
+2024-06-15 10:10:19 [INFO] worker-01 request: user=erin path=/api/users status=200 88ms
+2024-06-15 10:10:34 [INFO] worker-01 request: user=erin path=/health status=301 298ms
+2024-06-15 10:10:43 [INFO] web-02 request: user=bob path=/api/orders status=200 403ms
+2024-06-15 10:10:09 [INFO] api-01 request: user=erin path=/api/orders status=404 398ms
+2024-06-15 10:10:42 [INFO] web-01 request: user=bob path=/api/search status=404 180ms
+2024-06-15 10:10:49 [INFO] web-01 request: user=alice path=/api/search status=200 72ms
+2024-06-15 10:10:52 [ERROR] web-02 connection refused to db.internal port 443
+2024-06-15 10:10:02 [ERROR] web-01 connection refused to db.internal port 443
+2024-06-15 10:11:29 [INFO] web-02 request: user=dave path=/api/users status=200 295ms
+2024-06-15 10:11:28 [INFO] api-01 request: user=frank path=/api/search status=200 377ms
+2024-06-15 10:11:30 [INFO] api-02 request: user=alice path=/api/login status=200 410ms
+2024-06-15 10:11:19 [INFO] web-02 request: user=bob path=/api/orders status=200 155ms
+2024-06-15 10:11:31 [INFO] api-01 request: user=alice path=/api/orders status=301 73ms
+2024-06-15 10:11:01 [INFO] web-02 request: user=bob path=/api/orders status=404 371ms
+2024-06-15 10:11:37 [INFO] api-01 request: user=dave path=/api/users status=404 99ms
+2024-06-15 10:11:41 [INFO] worker-01 request: user=dave path=/api/search status=200 282ms
+2024-06-15 10:11:34 [INFO] web-02 request: user=carol path=/api/users status=200 204ms
+2024-06-15 10:11:08 [INFO] api-01 request: user=carol path=/api/users status=200 147ms
+2024-06-15 10:11:14 [INFO] api-02 request: user=alice path=/api/orders status=301 284ms
+2024-06-15 10:11:27 [INFO] web-01 request: user=dave path=/api/login status=200 350ms
+2024-06-15 10:11:13 [INFO] api-01 request: user=carol path=/health status=201 217ms
+2024-06-15 10:11:49 [INFO] api-02 request: user=carol path=/api/users status=201 391ms
+2024-06-15 10:11:56 [INFO] api-02 request: user=erin path=/api/search status=200 93ms
+{"time":"2024-06-15T10:11:00.000Z","level":"info","logger":"audit","msg":"audit event","host":"worker-01","user":"erin","country":"IN"}
+2024-06-15 10:11:32 [ERROR] web-02 connection refused to db.internal port 6379
+2024-06-15 10:11:52 [ERROR] web-02 connection refused to db.internal port 5432
+2024-06-15 10:12:00 [INFO] api-01 request: user=frank path=/api/users status=200 41ms
+2024-06-15 10:12:25 [INFO] web-02 request: user=frank path=/api/checkout status=201 42ms
+2024-06-15 10:12:56 [INFO] web-02 request: user=dave path=/api/users status=200 338ms
+2024-06-15 10:12:43 [INFO] worker-01 request: user=bob path=/api/users status=200 217ms
+2024-06-15 10:12:12 [INFO] api-02 request: user=dave path=/api/search status=404 273ms
+2024-06-15 10:12:44 [INFO] web-02 request: user=alice path=/api/login status=200 329ms
+2024-06-15 10:12:03 [INFO] web-01 request: user=alice path=/api/users status=200 200ms
+2024-06-15 10:12:05 [INFO] api-02 request: user=frank path=/api/orders status=200 170ms
+2024-06-15 10:12:05 [INFO] worker-01 request: user=dave path=/api/login status=200 51ms
+2024-06-15 10:12:02 [INFO] web-01 request: user=erin path=/health status=200 104ms
+2024-06-15 10:12:24 [INFO] api-02 request: user=alice path=/api/login status=200 398ms
+2024-06-15 10:12:24 [INFO] web-01 request: user=alice path=/api/checkout status=201 419ms
+2024-06-15 10:12:27 [INFO] api-01 request: user=carol path=/api/login status=301 288ms
+2024-06-15 10:12:10 [INFO] worker-01 request: user=frank path=/api/search status=200 131ms
+2024-06-15 10:12:41 [INFO] web-02 request: user=bob path=/api/search status=404 172ms
+2024-06-15 10:12:10 [ERROR] worker-01 connection refused to db.internal port 5432
+2024-06-15 10:12:23 [ERROR] web-02 connection refused to db.internal port 5432
+2024-06-15 10:13:27 [INFO] web-01 request: user=alice path=/api/login status=301 225ms
+2024-06-15 10:13:01 [INFO] api-02 request: user=erin path=/health status=200 281ms
+2024-06-15 10:13:43 [INFO] worker-01 request: user=bob path=/health status=200 224ms
+2024-06-15 10:13:58 [INFO] api-02 request: user=dave path=/api/users status=200 83ms
+2024-06-15 10:13:53 [INFO] worker-01 request: user=dave path=/api/checkout status=200 89ms
+2024-06-15 10:13:43 [INFO] api-01 request: user=alice path=/api/login status=200 78ms
+2024-06-15 10:13:59 [INFO] worker-01 request: user=dave path=/api/users status=200 200ms
+2024-06-15 10:13:15 [INFO] web-02 request: user=bob path=/api/login status=404 74ms
+2024-06-15 10:13:28 [INFO] web-01 request: user=bob path=/api/checkout status=200 234ms
+2024-06-15 10:13:39 [INFO] worker-01 request: user=carol path=/health status=200 197ms
+2024-06-15 10:13:02 [INFO] web-02 request: user=alice path=/api/checkout status=301 324ms
+2024-06-15 10:13:30 [INFO] web-02 request: user=bob path=/api/search status=301 93ms
+2024-06-15 10:13:56 [INFO] worker-01 request: user=alice path=/api/orders status=404 236ms
+2024-06-15 10:13:13 [INFO] web-01 request: user=erin path=/api/checkout status=301 93ms
+2024-06-15 10:13:18 [INFO] web-02 request: user=bob path=/api/users status=404 58ms
+{"time":"2024-06-15T10:13:00.000Z","level":"info","logger":"audit","msg":"audit event","host":"web-01","user":"bob","country":"US"}
+2024-06-15 10:13:14 [ERROR] worker-01 connection refused to db.internal port 5432
+2024-06-15 10:13:19 [ERROR] api-02 connection refused to db.internal port 443
+2024-06-15 10:14:07 [INFO] worker-01 request: user=dave path=/api/login status=301 281ms
+2024-06-15 10:14:04 [INFO] web-01 request: user=alice path=/api/checkout status=201 168ms
+2024-06-15 10:14:44 [INFO] web-01 request: user=bob path=/api/login status=301 148ms
+2024-06-15 10:14:18 [INFO] api-02 request: user=carol path=/api/orders status=200 268ms
+2024-06-15 10:14:36 [INFO] api-02 request: user=erin path=/api/login status=200 211ms
+2024-06-15 10:14:41 [INFO] web-01 request: user=frank path=/api/search status=301 258ms
+2024-06-15 10:14:32 [INFO] worker-01 request: user=bob path=/api/login status=301 65ms
+2024-06-15 10:14:59 [INFO] worker-01 request: user=dave path=/api/login status=404 362ms
+2024-06-15 10:14:12 [INFO] web-01 request: user=frank path=/api/orders status=200 285ms
+2024-06-15 10:14:23 [INFO] web-02 request: user=bob path=/api/checkout status=404 33ms
+2024-06-15 10:14:52 [INFO] web-02 request: user=bob path=/health status=404 220ms
+2024-06-15 10:14:55 [INFO] web-01 request: user=frank path=/api/checkout status=301 114ms
+2024-06-15 10:14:48 [INFO] worker-01 request: user=dave path=/api/search status=200 58ms
+2024-06-15 10:14:50 [INFO] worker-01 request: user=alice path=/health status=201 225ms
+2024-06-15 10:14:40 [INFO] web-01 request: user=dave path=/api/orders status=201 87ms
+{"time":"2024-06-15T10:14:00.000Z","level":"info","logger":"audit","msg":"audit event","host":"web-01","user":"carol","country":"US"}
+2024-06-15 10:14:20 [ERROR] worker-01 connection refused to db.internal port 443
+2024-06-15 10:14:38 [ERROR] web-01 connection refused to db.internal port 443
+2024-06-15 10:14:00 [ERROR] api-02 NullPointerException in CheckoutService for user bob
+2024-06-15 10:15:15 [INFO] api-01 request: user=dave path=/api/checkout status=201 294ms
+2024-06-15 10:15:23 [INFO] api-02 request: user=carol path=/api/login status=201 399ms
+2024-06-15 10:15:10 [INFO] web-01 request: user=frank path=/health status=200 42ms
+2024-06-15 10:15:33 [INFO] api-02 request: user=carol path=/health status=200 352ms
+2024-06-15 10:15:26 [INFO] web-01 request: user=frank path=/api/checkout status=201 307ms
+2024-06-15 10:15:37 [INFO] api-01 request: user=alice path=/api/users status=301 116ms
+2024-06-15 10:15:40 [INFO] api-02 request: user=dave path=/api/login status=404 221ms
+2024-06-15 10:15:48 [INFO] api-02 request: user=bob path=/api/checkout status=201 33ms
+2024-06-15 10:15:11 [INFO] api-02 request: user=frank path=/api/users status=200 148ms
+2024-06-15 10:15:37 [INFO] web-01 request: user=bob path=/api/search status=200 70ms
+2024-06-15 10:15:11 [INFO] worker-01 request: user=alice path=/api/users status=301 197ms
+2024-06-15 10:15:19 [INFO] web-01 request: user=dave path=/api/search status=301 75ms
+2024-06-15 10:15:36 [INFO] worker-01 request: user=alice path=/health status=200 187ms
+2024-06-15 10:15:21 [INFO] api-02 request: user=bob path=/api/login status=200 184ms
+2024-06-15 10:15:43 [INFO] api-01 request: user=frank path=/api/search status=301 236ms
+2024-06-15 10:15:37 [ERROR] web-01 connection refused to db.internal port 27017
+2024-06-15 10:15:54 [ERROR] web-01 connection refused to db.internal port 5432
+2024-06-15 10:15:27 [ERROR] web-02 timeout waiting for /api/search after 6023ms
+2024-06-15 10:15:53 [ERROR] web-02 timeout waiting for /api/users after 7435ms
+2024-06-15 10:15:32 [ERROR] web-01 timeout waiting for /health after 5975ms
+2024-06-15 10:15:40 [ERROR] api-02 timeout waiting for /api/checkout after 6248ms
+2024-06-15 10:15:12 [ERROR] web-02 timeout waiting for /api/users after 7248ms
+2024-06-15 10:15:47 [ERROR] api-01 timeout waiting for /api/checkout after 5764ms
+2024-06-15 10:15:02 [ERROR] api-01 timeout waiting for /api/checkout after 6580ms
+2024-06-15 10:15:39 [ERROR] worker-01 timeout waiting for /api/search after 7074ms
+2024-06-15 10:15:27 [ERROR] web-02 timeout waiting for /api/users after 7590ms
+2024-06-15 10:15:06 [ERROR] web-02 timeout waiting for /health after 5148ms
+2024-06-15 10:15:45 [ERROR] api-02 timeout waiting for /api/orders after 6489ms
+2024-06-15 10:15:06 [ERROR] web-02 timeout waiting for /api/users after 7805ms
+2024-06-15 10:15:59 [ERROR] web-02 timeout waiting for /health after 5123ms
+2024-06-15 10:15:53 [ERROR] api-02 timeout waiting for /api/search after 5054ms
+2024-06-15 10:15:57 [ERROR] web-01 timeout waiting for /api/login after 5511ms
+2024-06-15 10:15:12 [ERROR] worker-01 timeout waiting for /api/checkout after 5750ms
+2024-06-15 10:15:02 [ERROR] web-01 timeout waiting for /api/checkout after 7219ms
+2024-06-15 10:15:52 [ERROR] worker-01 timeout waiting for /api/orders after 7599ms
+2024-06-15 10:15:57 [ERROR] api-02 timeout waiting for /api/users after 7351ms
+2024-06-15 10:15:04 [ERROR] api-01 timeout waiting for /api/search after 5917ms
+2024-06-15 10:15:32 [ERROR] web-02 timeout waiting for /api/orders after 5509ms
+2024-06-15 10:15:44 [ERROR] worker-01 timeout waiting for /health after 7043ms
+2024-06-15 10:15:31 [ERROR] api-02 timeout waiting for /api/search after 6664ms
+2024-06-15 10:15:05 [ERROR] web-02 timeout waiting for /api/login after 5950ms
+2024-06-15 10:15:10 [ERROR] web-02 timeout waiting for /api/login after 7698ms
+2024-06-15 10:15:23 [ERROR] api-02 timeout waiting for /health after 6407ms
+2024-06-15 10:15:50 [ERROR] worker-01 timeout waiting for /api/login after 7822ms
+2024-06-15 10:15:56 [ERROR] worker-01 timeout waiting for /api/users after 6465ms
+2024-06-15 10:15:19 [ERROR] api-01 timeout waiting for /health after 6528ms
+2024-06-15 10:15:16 [ERROR] api-02 timeout waiting for /api/orders after 6345ms
+2024-06-15 10:15:08 [ERROR] web-01 timeout waiting for /api/users after 6320ms
+2024-06-15 10:15:07 [ERROR] worker-01 timeout waiting for /api/users after 5724ms
+2024-06-15 10:15:34 [ERROR] web-01 timeout waiting for /health after 5440ms
+2024-06-15 10:15:07 [ERROR] web-02 timeout waiting for /health after 6962ms
+2024-06-15 10:15:58 [ERROR] web-02 timeout waiting for /api/orders after 6485ms
+2024-06-15 10:15:08 [ERROR] worker-01 timeout waiting for /api/users after 5310ms
+2024-06-15 10:15:07 [ERROR] web-02 timeout waiting for /api/users after 6703ms
+2024-06-15 10:15:42 [ERROR] web-02 timeout waiting for /api/users after 6002ms
+2024-06-15 10:15:16 [ERROR] worker-01 timeout waiting for /api/orders after 5546ms
+2024-06-15 10:15:10 [ERROR] web-02 timeout waiting for /health after 5903ms
+2024-06-15 10:16:59 [INFO] web-01 request: user=carol path=/api/checkout status=201 272ms
+2024-06-15 10:16:25 [INFO] worker-01 request: user=alice path=/api/search status=201 296ms
+2024-06-15 10:16:59 [INFO] worker-01 request: user=frank path=/api/users status=404 155ms
+2024-06-15 10:16:16 [INFO] web-02 request: user=alice path=/api/checkout status=200 73ms
+2024-06-15 10:16:41 [INFO] api-01 request: user=bob path=/api/checkout status=201 93ms
+2024-06-15 10:16:49 [INFO] worker-01 request: user=carol path=/api/search status=200 82ms
+2024-06-15 10:16:09 [INFO] api-01 request: user=alice path=/api/search status=200 29ms
+2024-06-15 10:16:40 [INFO] web-02 request: user=alice path=/api/checkout status=200 114ms
+2024-06-15 10:16:07 [INFO] web-02 request: user=erin path=/api/login status=201 393ms
+2024-06-15 10:16:57 [INFO] api-01 request: user=bob path=/api/search status=200 240ms
+2024-06-15 10:16:00 [INFO] web-02 request: user=carol path=/health status=404 39ms
+2024-06-15 10:16:37 [INFO] web-01 request: user=alice path=/api/search status=200 241ms
+2024-06-15 10:16:00 [INFO] api-02 request: user=carol path=/api/orders status=404 409ms
+2024-06-15 10:16:45 [INFO] api-01 request: user=bob path=/api/checkout status=301 178ms
+2024-06-15 10:16:40 [INFO] api-01 request: user=bob path=/api/users status=200 415ms
+2024-06-15 10:16:28 [ERROR] api-01 connection refused to db.internal port 6379
+2024-06-15 10:16:00 [ERROR] web-01 connection refused to db.internal port 443
+2024-06-15 10:16:00 [ERROR] worker-01 timeout waiting for /api/search after 7683ms
+2024-06-15 10:17:46 [INFO] web-01 request: user=carol path=/api/users status=301 210ms
+2024-06-15 10:17:01 [INFO] api-02 request: user=carol path=/api/users status=200 345ms
+2024-06-15 10:17:31 [INFO] api-02 request: user=frank path=/api/orders status=301 23ms
+2024-06-15 10:17:44 [INFO] web-01 request: user=frank path=/api/users status=200 325ms
+2024-06-15 10:17:33 [INFO] web-02 request: user=frank path=/api/checkout status=201 331ms
+2024-06-15 10:17:31 [INFO] api-02 request: user=dave path=/api/users status=200 145ms
+2024-06-15 10:17:04 [INFO] api-02 request: user=frank path=/api/login status=200 325ms
+2024-06-15 10:17:08 [INFO] worker-01 request: user=erin path=/api/orders status=200 412ms
+2024-06-15 10:17:22 [INFO] worker-01 request: user=alice path=/api/users status=200 264ms
+2024-06-15 10:17:02 [INFO] worker-01 request: user=dave path=/api/search status=200 278ms
+2024-06-15 10:17:32 [INFO] worker-01 request: user=erin path=/api/search status=200 179ms
+2024-06-15 10:17:04 [INFO] api-01 request: user=erin path=/api/search status=404 356ms
+2024-06-15 10:17:32 [INFO] worker-01 request: user=erin path=/api/checkout status=200 122ms
+2024-06-15 10:17:39 [INFO] api-01 request: user=erin path=/api/orders status=301 200ms
+2024-06-15 10:17:11 [INFO] api-01 request: user=bob path=/api/checkout status=200 273ms
+2024-06-15 10:17:41 [ERROR] worker-01 connection refused to db.internal port 5432
+2024-06-15 10:17:17 [ERROR] web-02 connection refused to db.internal port 443
+2024-06-15 10:17:00 [ERROR] web-01 NullPointerException in CheckoutService for user frank
+2024-06-15 10:18:22 [INFO] api-01 request: user=alice path=/api/login status=201 67ms
+2024-06-15 10:18:09 [INFO] web-01 request: user=alice path=/api/users status=200 310ms
+2024-06-15 10:18:02 [INFO] worker-01 request: user=carol path=/api/checkout status=200 29ms
+2024-06-15 10:18:33 [INFO] api-01 request: user=frank path=/api/users status=404 375ms
+2024-06-15 10:18:13 [INFO] web-01 request: user=carol path=/api/login status=404 43ms
+2024-06-15 10:18:16 [INFO] api-01 request: user=dave path=/health status=404 147ms
+2024-06-15 10:18:32 [INFO] web-01 request: user=frank path=/api/login status=201 337ms
+2024-06-15 10:18:36 [INFO] worker-01 request: user=dave path=/api/users status=301 249ms
+2024-06-15 10:18:03 [INFO] web-01 request: user=carol path=/api/users status=200 217ms
+2024-06-15 10:18:38 [INFO] web-02 request: user=bob path=/api/login status=200 365ms
+2024-06-15 10:18:27 [INFO] api-02 request: user=erin path=/api/checkout status=200 272ms
+2024-06-15 10:18:11 [INFO] api-01 request: user=bob path=/api/users status=301 161ms
+2024-06-15 10:18:36 [INFO] api-02 request: user=frank path=/health status=200 392ms
+2024-06-15 10:18:52 [INFO] api-01 request: user=erin path=/api/orders status=200 236ms
+2024-06-15 10:18:11 [INFO] worker-01 request: user=carol path=/api/checkout status=404 336ms
+2024-06-15 10:18:04 [ERROR] api-01 connection refused to db.internal port 443
+2024-06-15 10:18:48 [ERROR] api-02 connection refused to db.internal port 5432
+2024-06-15 10:18:00 [ERROR] api-02 NullPointerException in CheckoutService for user carol
+2024-06-15 10:19:55 [INFO] worker-01 request: user=dave path=/health status=201 101ms
+2024-06-15 10:19:38 [INFO] api-02 request: user=frank path=/api/login status=200 297ms
+2024-06-15 10:19:39 [INFO] web-02 request: user=erin path=/health status=200 164ms
+2024-06-15 10:19:59 [INFO] web-02 request: user=alice path=/api/login status=201 385ms
+2024-06-15 10:19:31 [INFO] web-02 request: user=dave path=/api/login status=201 298ms
+2024-06-15 10:19:51 [INFO] worker-01 request: user=frank path=/health status=200 243ms
+2024-06-15 10:19:48 [INFO] api-01 request: user=alice path=/health status=200 212ms
+2024-06-15 10:19:15 [INFO] api-02 request: user=alice path=/api/login status=201 258ms
+2024-06-15 10:19:23 [INFO] web-01 request: user=erin path=/health status=201 298ms
+2024-06-15 10:19:19 [INFO] web-02 request: user=bob path=/api/users status=301 224ms
+2024-06-15 10:19:07 [INFO] worker-01 request: user=carol path=/api/login status=200 54ms
+2024-06-15 10:19:24 [INFO] web-01 request: user=alice path=/api/orders status=301 53ms
+2024-06-15 10:19:56 [INFO] worker-01 request: user=dave path=/api/login status=200 137ms
+2024-06-15 10:19:50 [INFO] api-02 request: user=dave path=/api/users status=201 306ms
+2024-06-15 10:19:34 [INFO] worker-01 request: user=carol path=/health status=200 414ms
+2024-06-15 10:19:54 [ERROR] api-02 connection refused to db.internal port 27017
+2024-06-15 10:19:05 [ERROR] web-01 connection refused to db.internal port 6379
+2024-06-15 10:19:00 [ERROR] api-02 NullPointerException in CheckoutService for user alice
+2024-06-15 10:20:41 [INFO] api-01 request: user=bob path=/health status=404 213ms
+2024-06-15 10:20:56 [INFO] web-01 request: user=carol path=/api/users status=301 221ms
+2024-06-15 10:20:45 [INFO] api-02 request: user=alice path=/health status=301 277ms
+2024-06-15 10:20:54 [INFO] web-01 request: user=alice path=/api/orders status=201 89ms
+2024-06-15 10:20:28 [INFO] web-01 request: user=frank path=/api/search status=301 133ms
+2024-06-15 10:20:00 [INFO] worker-01 request: user=dave path=/api/users status=200 48ms
+2024-06-15 10:20:51 [INFO] api-02 request: user=carol path=/api/orders status=200 186ms
+2024-06-15 10:20:34 [INFO] web-01 request: user=dave path=/api/login status=200 114ms
+2024-06-15 10:20:17 [INFO] web-01 request: user=carol path=/health status=200 171ms
+2024-06-15 10:20:17 [INFO] web-02 request: user=frank path=/api/login status=301 96ms
+2024-06-15 10:20:28 [INFO] web-02 request: user=bob path=/api/search status=200 349ms
+2024-06-15 10:20:35 [INFO] worker-01 request: user=alice path=/api/users status=301 303ms
+2024-06-15 10:20:43 [INFO] web-02 request: user=erin path=/api/checkout status=200 366ms
+2024-06-15 10:20:17 [INFO] web-01 request: user=erin path=/api/search status=200 144ms
+2024-06-15 10:20:51 [INFO] worker-01 request: user=bob path=/api/search status=404 168ms
+2024-06-15 10:20:30 [ERROR] api-01 connection refused to db.internal port 27017
+2024-06-15 10:20:47 [ERROR] worker-01 connection refused to db.internal port 443
+2024-06-15 10:20:00 [ERROR] api-02 timeout waiting for /health after 7951ms
+2024-06-15 10:20:00 [WARN] web-02 slow request: path=/health took 1516ms
+2024-06-15 10:21:42 [INFO] web-01 request: user=carol path=/api/orders status=200 40ms
+2024-06-15 10:21:43 [INFO] api-01 request: user=dave path=/api/login status=201 162ms
+2024-06-15 10:21:33 [INFO] web-01 request: user=dave path=/api/users status=404 244ms
+2024-06-15 10:21:07 [INFO] api-02 request: user=bob path=/api/orders status=301 37ms
+2024-06-15 10:21:21 [INFO] api-02 request: user=alice path=/api/checkout status=201 170ms
+2024-06-15 10:21:13 [INFO] worker-01 request: user=alice path=/api/users status=200 45ms
+2024-06-15 10:21:40 [INFO] web-02 request: user=erin path=/api/orders status=200 89ms
+2024-06-15 10:21:49 [INFO] api-02 request: user=frank path=/api/checkout status=404 74ms
+2024-06-15 10:21:16 [INFO] api-01 request: user=dave path=/api/users status=200 202ms
+2024-06-15 10:21:49 [INFO] api-01 request: user=frank path=/api/login status=301 258ms
+2024-06-15 10:21:09 [INFO] web-02 request: user=bob path=/api/users status=200 272ms
+2024-06-15 10:21:10 [INFO] worker-01 request: user=carol path=/api/users status=200 298ms
+2024-06-15 10:21:53 [INFO] web-02 request: user=carol path=/health status=200 383ms
+2024-06-15 10:21:16 [INFO] web-02 request: user=alice path=/api/search status=301 168ms
+2024-06-15 10:21:55 [INFO] web-02 request: user=dave path=/api/checkout status=201 138ms
+2024-06-15 10:21:34 [ERROR] worker-01 connection refused to db.internal port 27017
+2024-06-15 10:21:47 [ERROR] web-02 connection refused to db.internal port 443
+2024-06-15 10:22:03 [INFO] worker-01 request: user=bob path=/api/orders status=200 177ms
+2024-06-15 10:22:17 [INFO] api-02 request: user=dave path=/api/users status=201 264ms
+2024-06-15 10:22:51 [INFO] api-02 request: user=erin path=/api/login status=301 223ms
+2024-06-15 10:22:15 [INFO] worker-01 request: user=erin path=/api/search status=200 117ms
+2024-06-15 10:22:41 [INFO] web-02 request: user=dave path=/api/checkout status=200 217ms
+2024-06-15 10:22:52 [INFO] api-01 request: user=carol path=/api/search status=200 344ms
+2024-06-15 10:22:04 [INFO] web-01 request: user=dave path=/health status=200 292ms
+2024-06-15 10:22:48 [INFO] web-01 request: user=carol path=/api/checkout status=200 130ms
+2024-06-15 10:22:11 [INFO] web-02 request: user=erin path=/api/checkout status=301 233ms
+2024-06-15 10:22:46 [INFO] web-01 request: user=alice path=/api/orders status=200 370ms
+2024-06-15 10:22:43 [INFO] web-01 request: user=carol path=/api/search status=200 93ms
+2024-06-15 10:22:11 [INFO] api-02 request: user=carol path=/api/orders status=404 35ms
+2024-06-15 10:22:11 [INFO] api-02 request: user=alice path=/health status=404 346ms
+2024-06-15 10:22:00 [INFO] web-01 request: user=dave path=/api/checkout status=404 63ms
+2024-06-15 10:22:19 [INFO] api-02 request: user=bob path=/api/orders status=200 213ms
+{"time":"2024-06-15T10:22:00.000Z","level":"info","logger":"audit","msg":"audit event","host":"api-02","user":"bob","country":"JP"}
+2024-06-15 10:22:06 [ERROR] web-02 connection refused to db.internal port 27017
+2024-06-15 10:22:32 [ERROR] api-01 connection refused to db.internal port 443
+2024-06-15 10:22:00 [WARN] web-01 slow request: path=/api/search took 1446ms
+2024-06-15 10:23:47 [INFO] worker-01 request: user=bob path=/api/users status=404 103ms
+2024-06-15 10:23:58 [INFO] worker-01 request: user=bob path=/api/checkout status=301 112ms
+2024-06-15 10:23:17 [INFO] web-01 request: user=alice path=/api/login status=200 406ms
+2024-06-15 10:23:07 [INFO] web-02 request: user=frank path=/health status=404 232ms
+2024-06-15 10:23:06 [INFO] api-02 request: user=dave path=/api/checkout status=200 158ms
+2024-06-15 10:23:38 [INFO] web-01 request: user=dave path=/api/login status=200 300ms
+2024-06-15 10:23:23 [INFO] web-01 request: user=frank path=/api/users status=404 51ms
+2024-06-15 10:23:36 [INFO] web-01 request: user=alice path=/api/login status=301 140ms
+2024-06-15 10:23:00 [INFO] worker-01 request: user=erin path=/api/search status=201 331ms
+2024-06-15 10:23:11 [INFO] web-01 request: user=bob path=/api/search status=301 398ms
+2024-06-15 10:23:58 [INFO] web-02 request: user=bob path=/health status=200 306ms
+2024-06-15 10:23:31 [INFO] api-02 request: user=frank path=/api/login status=200 266ms
+2024-06-15 10:23:59 [INFO] web-02 request: user=alice path=/health status=200 32ms
+2024-06-15 10:23:12 [INFO] web-01 request: user=dave path=/api/users status=200 223ms
+2024-06-15 10:23:43 [INFO] api-01 request: user=erin path=/api/orders status=201 411ms
+{"time":"2024-06-15T10:23:00.000Z","level":"info","logger":"audit","msg":"audit event","host":"api-02","user":"dave","country":"DE"}
+2024-06-15 10:23:42 [ERROR] api-02 connection refused to db.internal port 443
+2024-06-15 10:23:52 [ERROR] web-02 connection refused to db.internal port 6379
+2024-06-15 10:24:47 [INFO] worker-01 request: user=carol path=/api/users status=201 222ms
+2024-06-15 10:24:22 [INFO] worker-01 request: user=erin path=/api/users status=404 267ms
+2024-06-15 10:24:44 [INFO] api-02 request: user=dave path=/api/login status=200 121ms
+2024-06-15 10:24:02 [INFO] api-02 request: user=bob path=/api/checkout status=200 110ms
+2024-06-15 10:24:45 [INFO] worker-01 request: user=frank path=/api/users status=200 351ms
+2024-06-15 10:24:21 [INFO] api-02 request: user=bob path=/api/checkout status=404 196ms
+2024-06-15 10:24:37 [INFO] worker-01 request: user=bob path=/api/orders status=201 351ms
+2024-06-15 10:24:00 [INFO] web-01 request: user=dave path=/api/orders status=201 150ms
+2024-06-15 10:24:16 [INFO] api-02 request: user=alice path=/api/users status=200 212ms
+2024-06-15 10:24:52 [INFO] web-01 request: user=erin path=/api/users status=200 196ms
+2024-06-15 10:24:35 [INFO] api-01 request: user=erin path=/api/login status=404 152ms
+2024-06-15 10:24:04 [INFO] web-02 request: user=erin path=/api/users status=301 115ms
+2024-06-15 10:24:25 [INFO] worker-01 request: user=dave path=/api/checkout status=200 208ms
+2024-06-15 10:24:49 [INFO] api-02 request: user=frank path=/api/login status=200 50ms
+2024-06-15 10:24:30 [INFO] api-02 request: user=carol path=/api/checkout status=404 31ms
+2024-06-15 10:24:05 [ERROR] web-02 connection refused to db.internal port 5432
+2024-06-15 10:24:04 [ERROR] api-01 connection refused to db.internal port 6379
+2024-06-15 10:25:20 [INFO] worker-01 request: user=erin path=/health status=301 315ms
+2024-06-15 10:25:40 [INFO] api-01 request: user=bob path=/health status=301 215ms
+2024-06-15 10:25:45 [INFO] api-02 request: user=dave path=/health status=201 204ms
+2024-06-15 10:25:23 [INFO] web-02 request: user=erin path=/api/search status=201 182ms
+2024-06-15 10:25:43 [INFO] web-02 request: user=carol path=/api/orders status=200 192ms
+2024-06-15 10:25:25 [INFO] web-01 request: user=alice path=/api/checkout status=200 210ms
+2024-06-15 10:25:41 [INFO] web-01 request: user=erin path=/api/orders status=301 295ms
+2024-06-15 10:25:56 [INFO] api-02 request: user=frank path=/api/search status=200 255ms
+2024-06-15 10:25:19 [INFO] web-02 request: user=carol path=/api/orders status=301 400ms
+2024-06-15 10:25:03 [INFO] web-02 request: user=carol path=/health status=301 25ms
+2024-06-15 10:25:37 [INFO] api-01 request: user=erin path=/api/orders status=404 120ms
+2024-06-15 10:25:57 [INFO] web-01 request: user=dave path=/api/orders status=200 189ms
+2024-06-15 10:25:29 [INFO] web-02 request: user=erin path=/api/users status=200 337ms
+2024-06-15 10:25:01 [INFO] web-01 request: user=dave path=/api/users status=200 180ms
+2024-06-15 10:25:11 [INFO] web-01 request: user=alice path=/health status=301 407ms
+{"time":"2024-06-15T10:25:00.000Z","level":"info","logger":"audit","msg":"audit event","host":"api-01","user":"frank","country":"JP"}
+2024-06-15 10:25:31 [ERROR] worker-01 connection refused to db.internal port 27017
+2024-06-15 10:25:50 [ERROR] api-01 connection refused to db.internal port 27017
+2024-06-15 10:25:00 [ERROR] api-01 timeout waiting for /api/checkout after 6017ms
+2024-06-15 10:26:03 [INFO] web-02 request: user=dave path=/api/checkout status=301 52ms
+2024-06-15 10:26:27 [INFO] worker-01 request: user=alice path=/health status=404 214ms
+2024-06-15 10:26:04 [INFO] api-02 request: user=bob path=/health status=404 291ms
+2024-06-15 10:26:23 [INFO] web-02 request: user=carol path=/api/login status=201 255ms
+2024-06-15 10:26:35 [INFO] web-02 request: user=bob path=/api/users status=201 230ms
+2024-06-15 10:26:56 [INFO] api-01 request: user=bob path=/health status=404 73ms
+2024-06-15 10:26:14 [INFO] api-01 request: user=erin path=/api/orders status=200 145ms
+2024-06-15 10:26:24 [INFO] web-02 request: user=bob path=/health status=404 70ms
+2024-06-15 10:26:45 [INFO] api-01 request: user=dave path=/api/search status=201 84ms
+2024-06-15 10:26:16 [INFO] worker-01 request: user=dave path=/api/checkout status=301 189ms
+2024-06-15 10:26:27 [INFO] api-02 request: user=frank path=/api/search status=200 157ms
+2024-06-15 10:26:24 [INFO] api-01 request: user=dave path=/api/search status=200 183ms
+2024-06-15 10:26:17 [INFO] api-02 request: user=alice path=/api/users status=200 103ms
+2024-06-15 10:26:03 [INFO] worker-01 request: user=bob path=/api/checkout status=404 308ms
+2024-06-15 10:26:56 [INFO] web-02 request: user=bob path=/api/orders status=200 336ms
+2024-06-15 10:26:49 [ERROR] web-01 connection refused to db.internal port 443
+2024-06-15 10:26:29 [ERROR] web-02 connection refused to db.internal port 6379
+2024-06-15 10:27:37 [INFO] web-02 request: user=frank path=/api/users status=200 40ms
+2024-06-15 10:27:03 [INFO] worker-01 request: user=frank path=/api/orders status=404 103ms
+2024-06-15 10:27:48 [INFO] worker-01 request: user=alice path=/api/search status=404 51ms
+2024-06-15 10:27:39 [INFO] api-02 request: user=dave path=/api/checkout status=201 169ms
+2024-06-15 10:27:27 [INFO] api-02 request: user=bob path=/health status=200 385ms
+2024-06-15 10:27:21 [INFO] web-02 request: user=carol path=/health status=200 327ms
+2024-06-15 10:27:14 [INFO] api-01 request: user=carol path=/api/search status=200 141ms
+2024-06-15 10:27:08 [INFO] web-01 request: user=alice path=/api/login status=200 312ms
+2024-06-15 10:27:48 [INFO] api-02 request: user=carol path=/api/checkout status=301 87ms
+2024-06-15 10:27:32 [INFO] web-02 request: user=alice path=/api/orders status=201 192ms
+2024-06-15 10:27:42 [INFO] web-01 request: user=dave path=/api/users status=200 382ms
+2024-06-15 10:27:50 [INFO] web-02 request: user=erin path=/api/orders status=200 374ms
+2024-06-15 10:27:13 [INFO] api-01 request: user=erin path=/health status=200 227ms
+2024-06-15 10:27:45 [INFO] web-02 request: user=bob path=/api/search status=301 263ms
+2024-06-15 10:27:22 [INFO] api-02 request: user=dave path=/api/users status=200 196ms
+2024-06-15 10:27:30 [ERROR] api-01 connection refused to db.internal port 443
+2024-06-15 10:27:43 [ERROR] web-02 connection refused to db.internal port 443
+2024-06-15 10:27:01 [FATAL] api-02 disk full: no space left on device /var/log
+2024-06-15 10:27:04 [FATAL] web-01 disk full: no space left on device /var/log
+2024-06-15 10:27:55 [FATAL] worker-01 disk full: no space left on device /var/log
+2024-06-15 10:27:26 [FATAL] worker-01 disk full: no space left on device /var/log
+2024-06-15 10:28:16 [INFO] web-01 request: user=bob path=/api/users status=200 235ms
+2024-06-15 10:28:52 [INFO] api-02 request: user=carol path=/api/login status=404 196ms
+2024-06-15 10:28:01 [INFO] worker-01 request: user=bob path=/api/login status=201 358ms
+2024-06-15 10:28:36 [INFO] worker-01 request: user=erin path=/api/search status=201 179ms
+2024-06-15 10:28:01 [INFO] worker-01 request: user=carol path=/health status=200 269ms
+2024-06-15 10:28:15 [INFO] web-01 request: user=dave path=/api/users status=200 335ms
+2024-06-15 10:28:23 [INFO] web-01 request: user=frank path=/health status=301 285ms
+2024-06-15 10:28:24 [INFO] web-01 request: user=dave path=/health status=404 48ms
+2024-06-15 10:28:28 [INFO] worker-01 request: user=dave path=/api/checkout status=301 388ms
+2024-06-15 10:28:45 [INFO] web-01 request: user=carol path=/api/orders status=200 409ms
+2024-06-15 10:28:10 [INFO] api-01 request: user=frank path=/api/users status=201 283ms
+2024-06-15 10:28:41 [INFO] web-01 request: user=bob path=/api/checkout status=200 61ms
+2024-06-15 10:28:28 [INFO] api-01 request: user=alice path=/health status=200 277ms
+2024-06-15 10:28:39 [INFO] web-02 request: user=carol path=/api/checkout status=200 285ms
+2024-06-15 10:28:30 [INFO] api-01 request: user=carol path=/api/users status=200 280ms
+2024-06-15 10:28:34 [ERROR] api-01 connection refused to db.internal port 6379
+2024-06-15 10:28:10 [ERROR] worker-01 connection refused to db.internal port 443
+2024-06-15 10:28:00 [ERROR] web-02 timeout waiting for /api/checkout after 7849ms
+2024-06-15 10:28:16 [FATAL] api-02 disk full: no space left on device /var/log
+2024-06-15 10:28:23 [FATAL] api-01 disk full: no space left on device /var/log
+2024-06-15 10:28:47 [FATAL] web-02 disk full: no space left on device /var/log
+2024-06-15 10:28:14 [FATAL] web-01 disk full: no space left on device /var/log
+2024-06-15 10:29:36 [INFO] api-02 request: user=carol path=/api/search status=200 220ms
+2024-06-15 10:29:01 [INFO] api-01 request: user=dave path=/api/login status=200 156ms
+2024-06-15 10:29:25 [INFO] web-01 request: user=carol path=/health status=200 306ms
+2024-06-15 10:29:04 [INFO] web-02 request: user=alice path=/api/checkout status=200 398ms
+2024-06-15 10:29:56 [INFO] web-02 request: user=erin path=/api/checkout status=201 109ms
+2024-06-15 10:29:56 [INFO] api-01 request: user=bob path=/health status=200 305ms
+2024-06-15 10:29:03 [INFO] web-02 request: user=erin path=/api/login status=200 123ms
+2024-06-15 10:29:50 [INFO] web-01 request: user=carol path=/api/login status=301 372ms
+2024-06-15 10:29:53 [INFO] web-02 request: user=frank path=/api/search status=404 378ms
+2024-06-15 10:29:17 [INFO] web-02 request: user=dave path=/api/users status=200 338ms
+2024-06-15 10:29:19 [INFO] api-01 request: user=erin path=/api/checkout status=200 338ms
+2024-06-15 10:29:20 [INFO] web-02 request: user=dave path=/api/search status=200 273ms
+2024-06-15 10:29:22 [INFO] worker-01 request: user=dave path=/api/login status=201 362ms
+2024-06-15 10:29:23 [INFO] worker-01 request: user=carol path=/api/users status=200 293ms
+2024-06-15 10:29:40 [INFO] web-01 request: user=bob path=/api/users status=404 147ms
+2024-06-15 10:29:40 [ERROR] web-02 connection refused to db.internal port 5432
+2024-06-15 10:29:11 [ERROR] web-02 connection refused to db.internal port 6379
+2024-06-15 10:29:00 [ERROR] web-02 timeout waiting for /api/search after 7686ms
+2024-06-15 10:29:02 [FATAL] api-02 disk full: no space left on device /var/log
+2024-06-15 10:29:28 [FATAL] api-01 disk full: no space left on device /var/log
+2024-06-15 10:29:30 [FATAL] api-02 disk full: no space left on device /var/log
+2024-06-15 10:29:54 [FATAL] api-02 disk full: no space left on device /var/log
