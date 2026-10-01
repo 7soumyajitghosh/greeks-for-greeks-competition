@@ -1,0 +1,23 @@
+{
+  "name": "logscope",
+  "version": "1.0.0",
+  "description": "Standalone log analysis tool — Drain-style log parsing, Sentry-style issue grouping, and anomaly detection",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "logscope": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "demo": "tsx src/cli.ts analyze test/sample.log",
+    "test": "vitest run",
+    "generate:sample": "tsx test/generate-sample.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
